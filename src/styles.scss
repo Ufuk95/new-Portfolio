@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Fira_Code';
+    src: url('/font/Fira_Code/static/FiraCode-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    background-color:  rgba(28, 28, 28, 1);
+    color: white;
+    font-family: 'Fira_Code';
+    font-weight: normal;
+    
+}
+
+html {
+    font-family: 'Fira_Code';
+    font-weight: normal;
+}
+
+
+
