@@ -2,20 +2,14 @@
     <header>
         <div>
             <div class="languageChange">
-                <div 
-                  class="EN" 
-                  [class.active]="isEngActive" 
-                  (click)="setActiveLanguage('EN')">
-                  <p>EN</p>
+                <div class="EN" [class.active]="isEngActive" (click)="setActiveLanguage('EN')">
+                    <p>EN</p>
                 </div>
-                <div 
-                  class="DE" 
-                  [class.active]="isGerActive" 
-                  (click)="setActiveLanguage('DE')">
-                  <p>DE</p>
+                <div class="DE" [class.active]="isGerActive" (click)="setActiveLanguage('DE')">
+                    <p>DE</p>
                 </div>
-              </div>
-              
+            </div>
+
             <a href="">About me</a>
             <a href="">Skills</a>
             <a href="">Projects</a>
@@ -25,4 +19,47 @@
             <h2>Ufuk Özsahin</h2>
         </div>
     </header>
+
+
+    <main>
+        <div class="leftSide">
+            <div>
+                <img src="/img/landingpage/arrow_bottom.svg" alt="arrow-bottom">
+            </div>
+            <img src="/img/landingpage/line_left.svg" alt="line">
+        </div>
+
+
+        <div class="middleSide">
+            <p class="jobName">Frontend Developer</p>
+            <p class="myName">Ufuk Özsahin</p>
+            <div class="buttonSection">
+                <button>Check my work</button>
+                <button>Contact me</button>
+            </div>
+        </div>
+
+
+        <div class="rightSide">
+            <p>{{email}}</p>
+            <img src="/img/landingpage/github.svg" alt="github">
+            <img src="/img/landingpage/linkedin.svg" alt="linkedIn">
+            <img src="/img/landingpage/line_right.svg" alt="">
+        </div>
+    </main>
+
+
+
+    <footer>
+        <p>Available for remote work</p>
+        <img src="/img/landingpage/radio_button.svg" alt="">
+        <p>Frontend Developer</p>
+        <img src="/img/landingpage/radio_button.svg" alt="">
+        <p>Based in Ingolstadt</p>
+        <img src="/img/landingpage/radio_button.svg" alt="">
+        <p>Open to work</p>
+        <img src="/img/landingpage/radio_button.svg" alt="">
+    </footer>
+
+
 </div>

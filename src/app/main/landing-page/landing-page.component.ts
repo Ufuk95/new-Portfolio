@@ -13,6 +13,8 @@ export class LandingPageComponent {
   isEngActive = true;
   isGerActive = false;
 
+  email = "info@ufuk-oezsahin.de";
+
 
   setActiveLanguage(language: string): void {
     if (language === 'EN') {
