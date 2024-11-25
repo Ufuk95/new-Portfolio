@@ -10,6 +10,16 @@ import { Component } from '@angular/core';
 })
 export class SkillSetComponent {
 
+  hoveredImage: { src: string; name: string } | null = null;
+
+  onHover(image: { src: string; name: string } | null): void {
+    if (image?.name === 'Growth mindset') {
+      this.hoveredImage = image;
+    } else {
+      this.hoveredImage = null;
+    }
+  }
+
 
 
   skillImages: { src: string, name: string }[] = [
@@ -23,7 +33,7 @@ export class SkillSetComponent {
     { src: '/img/skillset/api.svg', name: 'Rest-Api' },
     { src: '/img/skillset/scrum.svg', name: 'Scrum' },
     { src: '/img/skillset/material-design.svg', name: 'Material design' },
-    { src: '/img/skillset/mindset.svg', name: 'Growth mindset'}
+    { src: '/img/skillset/mindset.svg', name: 'Growth mindset' }
   ];
 
 }

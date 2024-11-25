@@ -31,10 +31,30 @@
 
 
     <div class="rightside">
-        <div *ngFor="let image of skillImages" class="skill-container">
+        <div *ngFor="let image of skillImages" class="skill-container" (mouseover)="onHover(image)"
+            (mouseleave)="onHover(null)">
+            <!-- Tooltip nur für das letzte Bild -->
+            <div class="growthHover"
+                *ngIf="hoveredImage?.name === 'Growth mindset' && image.name === 'Growth mindset'">
+                <p>I have a special interest in learning</p>
+                <div>
+                    <div>
+                        <img src="/img/skillset/react.svg" alt="React">
+                        <p>React</p>
+                    </div>
+                    <div>
+                        <img src="/img/skillset/vue.svg" alt="Vue JS">
+                        <p>Vue Js</p>
+                    </div>
+                </div>
+            </div>
+
             <img [src]="image.src" alt="web skill logos">
             <span>{{ image.name }}</span>
+
+            
         </div>
     </div>
-    
+
+
 </div>
