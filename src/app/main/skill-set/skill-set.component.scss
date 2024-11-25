@@ -1,0 +1,128 @@
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.fullBodySkillset {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+
+    .leftside {
+        width: 100%;
+        padding-left: 96px;
+        >p {
+            color: rgba(61, 207, 182, 1);
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 20px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(61, 207, 182, 0.1);
+            gap: 40px;
+            width: 100%;
+            max-width: 520px;
+            height: 100%;
+            border-radius: 30px;
+            border: 1px solid rgba(61, 207, 182, 1);
+            padding: 32px;
+
+
+            .headline {
+                font-size: 64px;
+                color: rgba(61, 207, 182, 1);
+                font-weight: 700;
+            }
+
+            .journeyText {
+                font-size: 18px;
+
+            }
+
+            .needText {
+                font-size: 24px;
+
+                span {
+                    color: rgba(61, 207, 182, 1);
+                }
+            }
+
+            .contactMe {
+                font-size: 16px;
+            }
+        }
+        button {
+            width: 122px;
+            font-size: 18px;
+            color: white;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 100px;
+            padding: 10px 24px 10px 24px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: .15s ease-in;
+    
+            &:hover {
+                border: 1px solid rgba(61, 207, 182, 1);
+                color: rgba(61, 207, 182, 1);
+                box-shadow: 0px 0px 10px rgba(61, 207, 182, 1);
+            }
+    
+        }
+        
+    }
+
+
+
+
+
+    .rightside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 72px;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-right: 96px;
+
+
+        .skill-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            gap: 8px;
+            flex-direction: column;
+            margin: 10px;
+            transform: translateY(-20px);
+            transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+    
+            >span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 75px;
+                font-weight: 700;
+                font-size: 16px;
+                text-align: center;
+            }
+    
+            img {
+                transition: transform 0.2s ease-in-out;
+    
+                &:hover {
+                    transform: translateY(-8px);
+                }
+            }
+        }
+    }
+    
+}
