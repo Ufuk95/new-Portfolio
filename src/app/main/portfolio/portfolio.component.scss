@@ -8,6 +8,7 @@ p {
     flex-direction: column;
     padding-left: 96px;
     box-sizing: border-box;
+    height: 80vh;
 
     div {
 
@@ -19,13 +20,13 @@ p {
             font-weight: 700;
             line-height: 28.06px;
         }
-    
+
         >h1 {
             font-size: 64px;
             color: rgba(61, 207, 182, 1);
             line-height: 64px;
         }
-    
+
         >span {
             font-size: 18px;
             line-height: 21.6px;
@@ -37,18 +38,36 @@ p {
     .myProjects {
         margin-top: 60px;
 
-        
+        .projectContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >img {
+                position: absolute;
+                width: 296px;
+                height: 192px;
+                border-radius: 16px;
+                right: 96px;
+                box-shadow:
+                    10px 10px 20px rgba(61, 207, 182, 0.4),
+                    /* Weicher, großer Schatten */
+                    0px 5px 15px rgba(61, 207, 182, 0.6);
+                /* Tieferer, fokussierter Schatten */
+                ;
+            }
+        }
 
 
         .project {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
+            width: 60%;
             max-width: 880px;
             padding: 40px 32px 40px 32px;
             border-top: 1px solid rgba(61, 207, 182, 1);
-            border-bottom: 1px solid rgba(61, 207, 182, 1);
+            cursor: pointer;
 
             div {
                 display: flex;
@@ -57,9 +76,17 @@ p {
 
             &:hover {
                 background-color: rgba(61, 207, 182, 0.3);
-                cursor: pointer;
+            }
+
+            >span {
+                font-size: 24px;
+                font-weight: 700;
             }
         }
+
+        .lastProject {
+            border-bottom: 1px solid rgba(61, 207, 182, 1);
+        }
     }
-    
+
 }

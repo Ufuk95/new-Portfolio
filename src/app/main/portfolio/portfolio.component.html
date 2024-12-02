@@ -13,20 +13,67 @@
         </span>
 
         <div class="myProjects">
-            <div class="project">
-                <span>Join</span>
-                <div>
-                    <span>Angular</span>
-                    <img src="/img/portfolio/|.svg" alt="|">
-                    <span>TypeScript</span>
-                    <img src="/img/portfolio/|.svg" alt="|">
-                    <span>HTML</span>
-                    <img src="/img/portfolio/|.svg" alt="|">
-                    <span>CSS</span>
-                    <img src="/img/portfolio/|.svg" alt="|">
-                    <span>Firebase</span>
+            <div *ngIf="!selectedProject">
+                <div class="projectContainer" (click)="selectProjectByName('Join')">
+                  <div class="project" (mouseenter)="isJoinHovered = true" (mouseleave)="isJoinHovered = false">
+                    <span>Join</span>
+                    <div>
+                      <span>Javascript</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>HTML</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>CSS</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>Firebase</span>
+                    </div>
+                  </div>
+                  <img src="/img/portfolio/join.png" alt="Join logo" *ngIf="isJoinHovered">
                 </div>
-            </div>
+              
+                <div class="projectContainer" (click)="selectProjectByName('El Pollo Loco')">
+                  <div class="project" (mouseenter)="isPolloLocoHovered = true" (mouseleave)="isPolloLocoHovered = false">
+                    <span>El Pollo Loco</span>
+                    <div>
+                      <span>HTML</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>CSS</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>Javascript</span>
+                    </div>
+                  </div>
+                  <img src="/img/portfolio/elpolloloco.png" alt="El Pollo Loco logo" *ngIf="isPolloLocoHovered">
+                </div>
+              
+                <div class="projectContainer" (click)="selectProjectByName('Pokédex')">
+                  <div class="project lastProject" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
+                    <span>Pokédex</span>
+                    <div>
+                      <span>HTML</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>CSS</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>Javascript</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>API</span>
+                    </div>
+                  </div>
+                  <img src="/img/portfolio/pokedex.png" alt="Pokedex image" *ngIf="isPokedexHovered">
+                </div>
+              </div>
+              
+              <!-- Detailansicht -->
+              <app-project 
+                *ngIf="selectedProject"
+                [id]="selectedProject.id"
+                [name]="selectedProject.name"
+                [description]="selectedProject.description"
+                [techStack]="selectedProject.techStack"
+                [stackLogo]="selectedProject.stackLogo"
+                [image]="selectedProject.image"
+                (select)="closeProject()">
+              </app-project>
+              
+            
         </div>
     </div>
 

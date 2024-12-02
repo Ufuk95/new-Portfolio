@@ -1,18 +1,31 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { portfolioProject } from '../shared/ALL_PROJECTS';
+import { ProjectComponent } from './project/project.component';
+
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ProjectComponent],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
+  isJoinHovered = false;
+  isPolloLocoHovered = false;
+  isPokedexHovered = false;
 
+  allProjects = portfolioProject;
+  selectedProject: any = null; // Aktuell ausgewähltes Projekt
 
-  // projects: { imgsrc: string, name: string, environment: string, text: string }[]  = [
-  //   { imgsrc: '/img/portfolio/joinPortfolio.png', name: 'Join', environment: 'Angular | TypeScript | HTML | CSS | Firebase', text: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.'},
-  //   { imgsrc: '/img/portfolio/PoloPortfolio.png', name: 'El Pollo Loco', environment: 'JavaScript | HTML | CSS', text: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.'},
-  //   { imgsrc: '/img/portfolio/Pokedex.png', name: 'Pokédex', environment: 'JavaScript | HTML | CSS | Api', text: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'}
-  // ]
+  // Setzt das aktuell ausgewählte Projekt
+  selectProjectByName(projectName: string) {
+    this.selectedProject = this.allProjects.find((proj) => proj.name === projectName);
+  }
+
+  // Schließt die Detailansicht
+  closeProject() {
+    this.selectedProject = null;
+  }
 }
