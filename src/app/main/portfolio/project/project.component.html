@@ -4,29 +4,23 @@
             <h1>{{ id }}</h1>
             <h2>{{ name }}</h2>
         </div>
-        <span>What is this project about?</span>
-        <p>{{ description }}</p>
-        <div class="usedTechStack">
-            <div>
-                <img src="/img/portfolio/blueJS.svg" alt="js">
-                <span>Javascript</span>
-            </div>
-
-            <div>
-                <img src="/img/portfolio/blueHTML.svg" alt="html">
-                <span>HTML</span>
-            </div>
-
-            <div>
-                <img src="/img/portfolio/blueCSS.svg" alt="css">
-                <span>CSS</span>
+        <div class="projectText">
+            <span>What is this project about?</span>
+            <p>{{ description }}</p>
+            <div class="usedTechStack">
+                <!-- Dynamische Generierung des Tech-Stacks -->
+                <div *ngFor="let tech of techStack; let i = index">
+                    <img [src]="stackLogo[i]" [alt]="tech">
+                    <span>{{ tech }}</span>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="imageProject">
-        <img src="/img/portfolio/closeWhite.svg" alt="close">
-        <img src="/img/portfolio/elpolloloco.png" alt="">
+        <img class="closeLogo" [src]="changeCloseImageSource" alt="close" (click)="select.emit()"
+            (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
+        <img class="imageLogo" [src]="image" [alt]="name">
         <div>
             <span>Next project</span>
             <img src="/img/portfolio/arrowBlue.svg" alt="arrow right">

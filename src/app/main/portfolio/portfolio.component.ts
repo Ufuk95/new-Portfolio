@@ -18,10 +18,14 @@ export class PortfolioComponent {
 
   allProjects = portfolioProject;
   selectedProject: any = null; // Aktuell ausgewähltes Projekt
+  
 
   // Setzt das aktuell ausgewählte Projekt
   selectProjectByName(projectName: string) {
     this.selectedProject = this.allProjects.find((proj) => proj.name === projectName);
+    this.isJoinHovered = false;
+    this.isPolloLocoHovered = false;
+    this.isPokedexHovered = false;
   }
 
   // Schließt die Detailansicht
