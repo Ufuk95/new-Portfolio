@@ -62,7 +62,7 @@
               </div>
               
               <!-- Detailansicht -->
-              <app-project 
+              <app-project
                 *ngIf="selectedProject"
                 [id]="selectedProject.id"
                 [name]="selectedProject.name"
@@ -70,6 +70,10 @@
                 [techStack]="selectedProject.techStack"
                 [stackLogo]="selectedProject.stackLogo"
                 [image]="selectedProject.image"
+                [link]="selectedProject.link"
+                [git]="selectedProject.git"
+                [currentIndex]="currentIndex"
+                (projectChange)="onProjectChange($event)"
                 (select)="closeProject()">
               </app-project>
               

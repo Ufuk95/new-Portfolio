@@ -15,13 +15,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="testingGitButton">
+            <a [href]="link"><button>Github <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+            <a [href]="git"><button>Livetest <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+        </div>
     </div>
 
     <div class="imageProject">
         <img class="closeLogo" [src]="changeCloseImageSource" alt="close" (click)="select.emit()"
             (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
         <img class="imageLogo" [src]="image" [alt]="name">
-        <div>
+        <div (click)="changeProject()">
             <span>Next project</span>
             <img src="/img/portfolio/arrowBlue.svg" alt="arrow right">
         </div>

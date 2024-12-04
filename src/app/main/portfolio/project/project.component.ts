@@ -20,13 +20,12 @@ export class ProjectComponent {
   @Input({required: true}) techStack!: string;
   @Input({required: true}) stackLogo!: string;
   @Input({required: true}) image!: string;
+  @Input({required: true}) link!: string;
+  @Input({required: true}) git!: string;
+  @Input() currentIndex!: number; // Aktueller Index des Projekts
+  @Output() projectChange = new EventEmitter<number>(); // Event für den Wechsel des Projekts
   @Output() select = new EventEmitter<string>();
 
-
-
-  onSelectUser() {
-    this.select.emit(this.id);
-  }
 
   get changeCloseImageSource() {
     if (this.isCloseImageHovered) {
@@ -34,5 +33,10 @@ export class ProjectComponent {
     } else {
       return '/img/portfolio/closeWhite.svg'
     }
+  }
+
+  changeProject() {
+    const nextIndex = (this.currentIndex + 1) % 3; // Nächster Index, zyklisch
+    this.projectChange.emit(nextIndex); // Emit den nächsten Index
   }
 }

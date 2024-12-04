@@ -18,7 +18,7 @@ export class PortfolioComponent {
 
   allProjects = portfolioProject;
   selectedProject: any = null; // Aktuell ausgewähltes Projekt
-  
+  currentIndex = 0;
 
   // Setzt das aktuell ausgewählte Projekt
   selectProjectByName(projectName: string) {
@@ -31,5 +31,11 @@ export class PortfolioComponent {
   // Schließt die Detailansicht
   closeProject() {
     this.selectedProject = null;
+  }
+
+  // Wechsel zum nächsten Projekt
+  onProjectChange(index: number) {
+    this.currentIndex = index;
+    this.selectedProject = this.allProjects[this.currentIndex];
   }
 }
