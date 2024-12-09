@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { AboutMeComponent } from "./about-me/about-me.component";
 import { SkillSetComponent } from "./skill-set/skill-set.component";
 import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { ContactComponent } from "./contact/contact.component";
 
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [LandingPageComponent, CommonModule, AboutMeComponent, SkillSetComponent, PortfolioComponent],
+  imports: [LandingPageComponent, CommonModule, AboutMeComponent, SkillSetComponent, PortfolioComponent, ContactComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss'
 })
