@@ -9,4 +9,22 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  isCheckboxHovered: boolean = false;
+  isCheckboxChecked: boolean = false;
+
+  get CheckboxImage(): string {
+    if (this.isCheckboxChecked) {
+      return this.isCheckboxHovered 
+        ? '/img/contact/checkedHover.svg' 
+        : '/img/contact/checked.svg';
+    } else {
+      return this.isCheckboxHovered 
+        ? '/img/contact/checkBoxHover.svg' 
+        : '/img/contact/checkBox.svg';
+    }
+  }
+
+  toggleCheckbox(): void {
+    this.isCheckboxChecked = !this.isCheckboxChecked;
+  }
 }
