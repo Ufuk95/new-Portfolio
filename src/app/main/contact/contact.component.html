@@ -15,32 +15,84 @@
 
 
     <div class="rightSide">
-        <form action="">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
             <div class="contactForm name">
-                <span>What's your name?</span>
-                <input type="text" placeholder="Your name goes here">
+              <span>What's your name?</span>
+              <input 
+                type="text" 
+                name="name" 
+                [(ngModel)]="contactData.name" 
+                #name="ngModel"
+                placeholder="Your name goes here" 
+                required />
+              <span *ngIf="name.invalid && (name.touched || formSubmitted)" class="error">
+                Name is required.
+              </span>
             </div>
+          
             <div class="contactForm email">
-                <span>What's your email?</span>
-                <input type="text" placeholder="youremail@email.com">
+              <span>What's your email?</span>
+              <input 
+                type="email" 
+                name="email" 
+                [(ngModel)]="contactData.email" 
+                #email="ngModel"
+                placeholder="youremail@email.com" 
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" 
+                required />
+              <span *ngIf="email.invalid && (email.touched || formSubmitted)" class="error">
+                Please enter a valid email address.
+              </span>
             </div>
+          
             <div class="contactForm help">
-                <span>How can I help you?</span>
-                <textarea type="text" placeholder="Hello Ufuk, I am interested in..."></textarea>
+              <span>How can I help you?</span>
+              <textarea 
+                name="message" 
+                [(ngModel)]="contactData.message" 
+                #message="ngModel"
+                placeholder="Hello Ufuk, I am interested in..." 
+                required></textarea>
+              <span *ngIf="message.invalid && (message.touched || formSubmitted)" class="error">
+                Message is required.
+              </span>
             </div>
-
+          
             <div class="checkBox">
-                <div>
-                    <img [src]="CheckboxImage" (mouseenter)="isCheckboxHovered = true"
-                        (mouseleave)="isCheckboxHovered = false" (click)="toggleCheckbox()" alt="checkbox">
-                    <p>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
-                    </p>
-                </div>
-                <div>
-                    <button disabled="disabled">Say Hello :)</button>
-                </div>
+              <div>
+                <img 
+                  [src]="CheckboxImage" 
+                  (mouseenter)="isCheckboxHovered = true"
+                  (mouseleave)="isCheckboxHovered = false"
+                  (click)="toggleCheckbox()"
+                  alt="checkbox" />
+                <p [class.error]="!isCheckboxChecked && formSubmitted">
+                  I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+                </p>
+                <span *ngIf="!isCheckboxChecked && formSubmitted" class="warning">
+                  You must accept the privacy policy to proceed.
+                </span>
+              </div>
+              <div>
+                <!-- Statt [disabled], verwenden wir eine Logik in der CSS-Klasse -->
+                <button 
+                [ngClass]="{ 'valid-button': isFormValid(contactForm), 'invalid-button': !isFormValid(contactForm) }" 
+                  (click)="handleButtonClick(contactForm)">
+                  Say Hello :)
+                </button>
+              </div>
             </div>
+          
+            <div *ngIf="showNotification" class="notification">
+              Your message has been sent successfully!
+            </div>
+          
+            <div *ngIf="errorMessage" class="error-message">
+              {{ errorMessage }}
+            </div>
+          </form>
+          
+          
 
-        </form>
     </div>
 </div>

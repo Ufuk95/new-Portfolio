@@ -69,6 +69,7 @@ p {
             padding: 32px;
             border-top: 1px solid rgba(61, 207, 182, 0.5);
             border-bottom: 1px solid rgba(61, 207, 182, 0.5);
+            position: relative;
 
             &:hover {
                 border-top: 1px solid rgba(61, 207, 182, 1);
@@ -121,6 +122,14 @@ p {
             textarea:focus-visible {
                 outline: none;
             }
+
+
+            .error {
+                color: red;
+                font-size: 0.875rem;
+                position: absolute;
+                bottom: 0;
+            }
         }
 
         .email {
@@ -141,19 +150,20 @@ p {
             display: flex;
             flex-direction: column;
             gap: 16px;
-        
+
             >div {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 8px;
+                position: relative;
 
                 img {
-                    flex-shrink: 0; 
-                    align-self: flex-start; 
+                    flex-shrink: 0;
+                    align-self: flex-start;
                     cursor: pointer;
                 }
-        
+
                 p {
                     margin: 0;
                     line-height: 1.4;
@@ -163,25 +173,43 @@ p {
                     line-height: 18px;
                 }
 
+                .warning {
+                    position: absolute;
+                    bottom: -24px;
+                    left: 32px;
+                    font-size: 12px;
+                    color: red;
+                }
+
 
                 button {
-                    margin-top: 16px;
+                    margin-top: 24px;
                     border: 1px solid rgba(255, 255, 255, 0.5);
                     border-radius: 100px;
                     min-width: 139px;
                     height: 48px;
                     padding: 12px 24px 12px 24px;
                     background-color: transparent;
-                    color: rgba(255, 255, 255, 0.8);
+                    color: rgba(255, 255, 255, 0.7);
                     font-size: 18px;
                     line-height: 21.6px;
                     font-weight: 400;
+                    cursor: not-allowed;
+                    transition: all 0.3s ease;
+                }
+
+                button.valid-button {
+                    border: 1px solid rgba(255, 255, 255, 1);
+                    color: rgba(255, 255, 255, 1);
+                    cursor: pointer;
+
+                    &:hover {
+                        border: 1px solid rgba(61, 207, 182, 1);
+                        color: rgba(61, 207, 182, 1);
+                        box-shadow: 0px 0px 10px rgba(61, 207, 182, 1);
+                    }
                 }
             }
         }
-        
     }
-
-
-    
 }
