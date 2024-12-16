@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Renderer2 } from '@angular/core';
-import { portfolioProject } from '../shared/ALL_PROJECTS';
+import { portfolioProject } from '../../shared/ALL_PROJECTS';
 import { ProjectComponent } from './project/project.component';
 
 

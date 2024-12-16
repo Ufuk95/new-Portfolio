@@ -77,16 +77,14 @@ export class ContactComponent {
   
 
   onSubmit(form: NgForm): void {
-    // Setzt die Variable formSubmitted auf true, um die Validierung anzuzeigen
     this.formSubmitted = true;
   
     if (this.isFormValid(form)) {
-      // Wenn das Formular gültig ist und die Checkbox aktiv ist, absenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options).subscribe({
         next: () => {
           this.showNotification = true;
           this.errorMessage = '';
-          this.resetFormState(form); // Formular und Zustände vollständig zurücksetzen
+          this.resetFormState(form);
   
           setTimeout(() => {
             this.showNotification = false;
@@ -95,26 +93,20 @@ export class ContactComponent {
         error: (error) => {
           console.error('Error:', error);
           this.errorMessage = 'An error occurred. Please try again later.';
-          this.resetFormState(form);
+          this.resetFormState(form); // sollte später wieder gelöscht werden nachdem das senden funktioniert 
         },
       });
     } else {
-      // Wenn das Formular oder die Checkbox ungültig ist, eine Fehlermeldung ausgeben
       if (!this.isCheckboxChecked) {
         console.warn('Checkbox not checked. Showing warning message.');
       }
     }
   }
   
-  // Hilfsfunktion zum Zurücksetzen der Formularzustände
   private resetFormState(form: NgForm): void {
     form.resetForm(); // Eingabefelder und Validierungszustände zurücksetzen
     this.contactData = { name: '', email: '', message: '' }; // Sicherstellen, dass die Daten leer sind
     this.isCheckboxChecked = false; // Checkbox zurücksetzen
     this.formSubmitted = false; // Validierungsstatus zurücksetzen, um Fehlermeldungen zu vermeiden
   }
-  
-  
-  
-   
 }
