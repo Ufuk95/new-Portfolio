@@ -9,6 +9,8 @@ p {
     padding-left: 96px;
     box-sizing: border-box;
     height: 80vh;
+    max-width: 1920px;
+    width: 100%;
 
     div {
 
@@ -19,6 +21,7 @@ p {
             font-size: 24px;
             font-weight: 700;
             line-height: 28.06px;
+            font-family: "Karla";
         }
 
         >h1 {
@@ -30,6 +33,7 @@ p {
         >span {
             font-size: 18px;
             line-height: 21.6px;
+            font-family: "Karla";
         }
     }
 
@@ -42,6 +46,7 @@ p {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
 
             >img {
                 position: absolute;

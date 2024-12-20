@@ -3,13 +3,17 @@ header {
     padding-right: 96px;
     padding-top: 20px;
     padding-bottom: 20px;
-
+    max-width: 1920px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
     height: 15%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+    position: absolute;
+    top: 0;
+
 
     div {
         display: flex;

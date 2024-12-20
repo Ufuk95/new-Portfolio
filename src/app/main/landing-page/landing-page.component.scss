@@ -3,7 +3,7 @@
     max-width: 1920px;
     height: 100vh;
     font-family: "Fira_Code";
-    background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    // background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
     box-sizing: border-box;
 
     main {
@@ -11,7 +11,7 @@
         justify-content: space-evenly;
         position: relative;
         height: 85%;
-    
+        top: 15%;
     
         .leftSide {
             display: flex;
@@ -76,6 +76,7 @@
                 transform: rotate(-90deg);
                 position: relative;
                 bottom: 70px;
+                font-family: "Karla";
             }
         }
     
@@ -105,7 +106,7 @@
 
 
 footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -141,6 +142,7 @@ footer {
         color: rgba(61, 207, 182, 1);
         font-size: 32px;
         margin: 0;
+        font-family: "Karla";
     }
 
     @keyframes scroll-linear {
