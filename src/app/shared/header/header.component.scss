@@ -13,6 +13,7 @@ header {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     position: absolute;
     top: 0;
+    z-index: 3;
 
 
     div {
@@ -22,7 +23,7 @@ header {
         gap: 24px;
         box-sizing: border-box;
 
-        a {
+        .link {
             color: white;
             text-decoration: none;
             font-size: 20px;
@@ -96,6 +97,14 @@ header {
     .languageChange div:not(.active) {
         &:hover {
             color: rgba(61, 207, 182, 1);
+        }
+    }
+
+    .myLogo {
+        cursor: pointer;
+
+        img {
+            width: 152px;
         }
     }
 

@@ -1,5 +1,5 @@
 <header>
-    <div>
+    <div class="leftSide">
         <div class="languageChange">
             <div class="EN" [class.active]="isEngActive" (click)="setActiveLanguage('EN')">
                 <p>EN</p>
@@ -9,12 +9,12 @@
             </div>
         </div>
 
-        <a href="">About me</a>
-        <a href="">Skills</a>
-        <a href="">Projects</a>
+        <a class="link" href="#aboutMe">About me</a>
+        <a class="link" href="#skill">Skills</a>
+        <a class="link" href="#portfolio">Projects</a>
     </div>
 
     <div>
-        <h2>Ufuk Özsahin</h2>
+        <a routerLink="/" class="myLogo"><img src="/img/UO-Logo.png" alt="logo"></a>
     </div>
 </header>

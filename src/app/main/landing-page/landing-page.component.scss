@@ -3,7 +3,7 @@
     max-width: 1920px;
     height: 100vh;
     font-family: "Fira_Code";
-    // background: linear-gradient(55.22deg, #1C1C1C 36.26%, #08463B 93.28%);
+    position: relative;
     box-sizing: border-box;
 
     main {
@@ -12,7 +12,7 @@
         position: relative;
         height: 85%;
         top: 15%;
-    
+
         .leftSide {
             display: flex;
             flex-direction: column;
@@ -22,13 +22,13 @@
             position: absolute;
             left: 96px;
             bottom: 0;
-    
+
             >img {
                 display: flex;
                 align-items: center;
                 width: 2px;
             }
-    
+
             div {
                 display: flex;
                 justify-content: center;
@@ -39,29 +39,29 @@
                 border-radius: 32px;
                 overflow: hidden;
                 /* Sicherstellen, dass das Bild innerhalb bleibt */
-    
+
                 img {
                     // position: relative;
                     animation: moveUpDown 2s ease-in-out infinite;
                     /* Animation anwenden */
                 }
             }
-    
+
             @keyframes moveUpDown {
-    
+
                 0%,
                 100% {
                     transform: translateY(-5px);
                     /* Start- und Endpunkt */
                 }
-    
+
                 50% {
                     transform: translateY(5px);
                     /* Bewegung nach unten */
                 }
             }
         }
-    
+
         .rightSide {
             display: flex;
             flex-direction: column;
@@ -71,30 +71,50 @@
             position: absolute;
             right: 96px;
             bottom: 0;
-    
-            p {
-                transform: rotate(-90deg);
-                position: relative;
-                bottom: 70px;
-                font-family: "Karla";
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: rgba(61, 207, 182, 1);
+                }
+
+                p {
+                    transform: rotate(-90deg);
+                    position: relative;
+                    bottom: 70px;
+                    font-family: "Karla";
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                }
+
+                img {
+                    transition: transform 0.3s ease;
+                    
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
             }
+
         }
-    
+
         .middleSide {
             display: flex;
             justify-content: center;
             flex-direction: column;
             align-items: center;
             height: 70%;
-    
+
             .jobName {
                 font-size: 40px;
             }
-    
+
             .myName {
                 font-size: 106px;
             }
-    
+
             p {
                 margin-block-start: 0;
                 margin-block-end: 0;
@@ -106,7 +126,7 @@
 
 
 footer {
-    position: relative;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
