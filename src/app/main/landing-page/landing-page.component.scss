@@ -204,3 +204,62 @@ footer {
 
     }
 }
+
+.d-none {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 695px) {
+    .landingPage {
+
+        main {
+
+            .leftSide {
+                left: 16px;
+
+                >img {
+                    height: 150px;
+                }
+            }
+
+
+            .middleSide {
+                .jobName {
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+                .myName {
+                    font-size: 52px;
+                }
+            }
+
+            .rightSide {
+                right: 16px;
+                width: 32px;
+
+
+                .mailLink {
+                    display: none;
+                }
+
+                .rightSideLine {
+                    height: 150px;
+                }
+
+                .mailImg {
+                    display: block;
+                    width: 32px;
+                }
+            }
+        }
+    }
+
+    footer {
+        height: 53px;
+
+
+        p {
+            font-size: 24px;
+        }
+    }
+}
