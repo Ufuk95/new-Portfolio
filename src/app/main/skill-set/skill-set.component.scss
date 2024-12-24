@@ -68,6 +68,7 @@ p {
                 font-family: "Karla";
             }
         }
+
         button {
             width: 122px;
             font-size: 18px;
@@ -80,15 +81,15 @@ p {
             cursor: pointer;
             overflow: hidden;
             transition: .15s ease-in;
-    
+
             &:hover {
                 border: 1px solid rgba(61, 207, 182, 1);
                 color: rgba(61, 207, 182, 1);
                 box-shadow: 0px 0px 10px rgba(61, 207, 182, 1);
             }
-    
+
         }
-        
+
     }
 
 
@@ -109,13 +110,13 @@ p {
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
             gap: 8px;
             flex-direction: column;
             margin: 10px;
             transform: translateY(-20px);
             transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
-    
+
             >span {
                 display: flex;
                 align-items: center;
@@ -125,10 +126,10 @@ p {
                 font-size: 16px;
                 text-align: center;
             }
-    
+
             img {
                 transition: transform 0.2s ease-in-out;
-    
+
                 &:hover {
                     transform: translateY(-8px);
                 }
@@ -151,7 +152,7 @@ p {
         overflow: hidden;
         border-radius: 30px;
 
-        
+
 
         div {
             display: flex;
@@ -159,6 +160,7 @@ p {
             align-items: center;
             padding-top: 5px;
             box-sizing: border-box;
+
             div {
                 display: flex;
                 flex-direction: column;
@@ -166,5 +168,50 @@ p {
             }
         }
     }
-    
+
+}
+
+
+@media (min-width:320px) and (max-width:650px) {
+
+    .fullBodySkillset {
+        flex-direction: column;
+        gap: 52px;
+
+
+
+        .leftside {
+            padding-left: 16px;
+            padding-right: 16px;
+
+            >p {
+                font-size: 18px;
+            }
+
+            div {
+
+                .headline {
+                    font-size: 56px;
+                }
+
+                .journeyText {
+                    font-size: 16px;
+                }
+
+                .needText {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .rightside {
+            padding-left: 16px;
+            padding-right: 16px;
+            justify-content: flex-start;
+
+            .skill-container {
+                margin: inherit;
+            }
+        }
+    }
 }

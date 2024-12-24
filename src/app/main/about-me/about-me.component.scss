@@ -56,3 +56,29 @@
         }
     }
 }
+
+@media (min-width:320px) and (max-width:650px) {
+    .fullBodyAboutMe {
+        flex-direction: column;
+        gap: 40px;
+        padding: 150px 16px 150px 16px;
+
+
+
+        .aboutMe {
+
+
+            p {
+                font-size: 16px;
+            }
+
+            >p {
+                font-size: 18px;
+            }
+
+            .headline {
+                font-size: 54px;
+            }
+        }
+    }
+}

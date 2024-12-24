@@ -36,7 +36,7 @@ export class ProjectComponent {
   }
 
   changeProject() {
-    const nextIndex = (this.currentIndex + 1) % 3; // Nächster Index, zyklisch
-    this.projectChange.emit(nextIndex); // Emit den nächsten Index
+    const nextIndex = (this.currentIndex + 1) % 3;
+    this.projectChange.emit(nextIndex); 
   }
 }
