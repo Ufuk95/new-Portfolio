@@ -235,3 +235,51 @@ p {
         }
     }
 }
+
+
+@media (min-width:320px) and (max-width:650px) {
+    .contactFullBody {
+        flex-direction: column;
+        padding-left: 16px;
+        padding-right: 16px;
+
+
+        .leftSide {
+            .headline {
+
+
+                h3 {
+                    font-size: 18px;
+                }
+                h1 {
+                    font-size: 56px;
+                }
+            }
+
+            .textInfo {
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .rightSide {
+
+            .contactForm {
+
+                input {
+                    font-size: 16px;
+                }
+
+                textarea {
+                    font-size: 16px;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

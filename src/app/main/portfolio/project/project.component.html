@@ -1,34 +1,46 @@
 <div class="projectDescription">
-    <div class="testProject">
-        <div class="testProjectHeadline">
-            <h1>{{ id }}</h1>
-            <h2>{{ name }}</h2>
-        </div>
-        <div class="projectText">
-            <span>What is this project about?</span>
-            <p>{{ description }}</p>
-            <div class="usedTechStack">
-                <!-- Dynamische Generierung des Tech-Stacks -->
-                <div *ngFor="let tech of techStack; let i = index">
-                    <img [src]="stackLogo[i]" [alt]="tech">
-                    <span>{{ tech }}</span>
+
+    <!-- button to close the component -->
+    <img class="closeLogo" [src]="changeCloseImageSource" alt="close" (click)="select.emit()"
+            (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
+
+
+    <div class="TextButtonImageArea">
+        <div class="testProject">
+            <div class="testProjectHeadline">
+                <h1>{{ id }}</h1>
+                <h2>{{ name }}</h2>
+            </div>
+            <div class="projectText">
+                <span>What is this project about?</span>
+                <p>{{ description }}</p>
+                <div class="usedTechStack">
+                    <!-- Dynamische Generierung des Tech-Stacks -->
+                    <div *ngFor="let tech of techStack; let i = index">
+                        <img [src]="stackLogo[i]" [alt]="tech">
+                        <span>{{ tech }}</span>
+                    </div>
                 </div>
             </div>
+    
+            <div class="testingGitButton">
+                <a [href]="link"><button>Github <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+                <a [href]="git"><button>Livetest <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+            </div>
         </div>
-
-        <div class="testingGitButton">
-            <a [href]="link"><button>Github <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
-            <a [href]="git"><button>Livetest <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+    
+        <!-- Image Logo of project -->
+        <div class="imageProject">
+            
+            <img class="imageLogo" [src]="image" [alt]="name">
+            
         </div>
     </div>
+   
 
-    <div class="imageProject">
-        <img class="closeLogo" [src]="changeCloseImageSource" alt="close" (click)="select.emit()"
-            (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
-        <img class="imageLogo" [src]="image" [alt]="name">
-        <div (click)="changeProject()">
-            <span>Next project</span>
-            <img src="/img/portfolio/arrowBlue.svg" alt="arrow right">
-        </div>
+    <!-- nächstes projekt unten rechts bereich -->
+    <div class="nextProject" (click)="changeProject()">
+        <span>Next project</span>
+        <img src="/img/portfolio/arrowBlue.svg" alt="arrow right">
     </div>
 </div>

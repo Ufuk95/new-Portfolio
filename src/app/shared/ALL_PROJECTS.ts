@@ -5,7 +5,7 @@ export const portfolioProject = [
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       techStack: ['HTML', 'CSS', 'JavaScript', 'Firebase'],
       stackLogo: ['/img/portfolio/blueHTML.svg', '/img/portfolio/blueCSS.svg', '/img/portfolio/blueJS.svg', '/img/portfolio/blueFirebase.svg'],
-      image: '/img/portfolio/join.png',
+      image: '/img/portfolio/join.svg',
       link: 'https://join.ufuk-oezsahin.de/index.html',
       git: 'https://github.com/Ufuk95/Join'
     },
@@ -15,7 +15,7 @@ export const portfolioProject = [
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       techStack: ['HTML', 'CSS', 'Javascript'],
       stackLogo: ['/img/portfolio/blueHTML.svg', '/img/portfolio/blueCSS.svg', '/img/portfolio/blueJS.svg'],
-      image: '/img/portfolio/elpolloloco.png',
+      image: '/img/portfolio/EPL.svg',
       link: 'https://loco.ufuk-oezsahin.de/',
       git: 'https://github.com/Ufuk95/El-Pollo-Loco'
     },

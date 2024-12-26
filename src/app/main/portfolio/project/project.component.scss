@@ -7,110 +7,119 @@
     border: 1px solid rgba(61, 207, 182, 1);
     border-radius: 30px;
     background: linear-gradient(45deg, rgba(28, 28, 28, 1) 45%, rgba(8, 70, 59, 1) 95%);
-    width: 80vw;
-    height: 80vh;
+    width: 95vw;
+    height: 85vh;
     position: absolute;
     max-width: 1920px;
     max-height: 1000px;
 
-    .testProject {
+    .TextButtonImageArea {
         display: flex;
-        flex-direction: column;
-        width: 50%;
-        height: 100%;
-        overflow: hidden;
-        gap: 40px;
+        justify-content: center;
+        align-items: center;
 
-        .testProjectHeadline {
+
+        .testProject {
             display: flex;
             flex-direction: column;
-            gap: 24px;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            gap: 40px;
 
-            h1 {
-                margin-block-start: 0;
-                margin-block-end: 0;
-                font-size: 128px;
-                font-weight: 700;
-                color: rgba(61, 207, 182, 1);
-                //line-height: 100px;
-            }
-
-            h2 {
-                margin-block-start: 0;
-                margin-block-end: 0;
-                font-size: 64px;
-                font-weight: 700;
-                line-height: 51.2px;
-            }
-        }
-
-        .projectText {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            >span {
-                font-size: 24px;
-                font-weight: 700;
-                color: rgba(61, 207, 182, 1);
-            }
-
-            >p {
-                font-size: 18px;
-            }
-        }
-
-
-        .usedTechStack {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 16px;
-
-            div {
+            .testProjectHeadline {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 4px;
+                flex-direction: column;
+                gap: 24px;
 
-                >img {
-                    width: 24px;
-                    height: 24px;
+                h1 {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    font-size: 128px;
+                    font-weight: 700;
+                    color: rgba(61, 207, 182, 1);
+                    //line-height: 100px;
+                }
+
+                h2 {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    font-size: 64px;
+                    font-weight: 700;
+                    line-height: 51.2px;
                 }
             }
-        }
 
-        .testingGitButton {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 32px;
+            .projectText {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
 
-            a {
-                text-decoration: none;
+                >span {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: rgba(61, 207, 182, 1);
+                }
 
-                button {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    border: 1px solid rgba(255, 255, 255, 1);
-                    border-radius: 30px;
-                    color: white;
-                    background-color: transparent;
-                    width: 130px;
-                    height: 48px;
-                    padding: 24px;
+                >p {
                     font-size: 18px;
-                    cursor: pointer;
+                }
+            }
 
-                    &:hover {
-                        border-color: rgba(61, 207, 182, 1);
-                        color: rgba(61, 207, 182, 1);
-                        box-shadow: 0px 0px 10px rgba(61, 207, 182, 1);
 
-                        img {
-                            transform: scale(1.1) translate(3px, -3px);
-                            transition: transform 0.1s ease;
+            .usedTechStack {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 16px;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 4px;
+
+                    >img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+            .testingGitButton {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 32px;
+                height: 70px;
+                padding-left: 8px;
+
+                a {
+                    text-decoration: none;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        border: 1px solid rgba(255, 255, 255, 1);
+                        border-radius: 30px;
+                        color: white;
+                        background-color: transparent;
+                        width: 130px;
+                        height: 48px;
+                        padding: 24px;
+                        font-size: 18px;
+                        cursor: pointer;
+
+                        &:hover {
+                            border-color: rgba(61, 207, 182, 1);
+                            color: rgba(61, 207, 182, 1);
+                            box-shadow: 0px 0px 10px rgba(61, 207, 182, 1);
+
+                            img {
+                                transform: scale(1.1) translate(3px, -3px);
+                                transition: transform 0.1s ease;
+                            }
                         }
                     }
                 }
@@ -128,99 +137,131 @@
     width: 50%;
     height: 100%;
 
-    .closeLogo {
-        width: 17.85px;
-        height: 17.85px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
 
-        &:hover {
-            transform: scale(1.3);
-            transition: transform 0.2s ease;
-        }
-    }
 
     .imageLogo {
-        max-width: 520px;
-        max-height: 369.78px;
-        // width: 520px;
-        // height: 369.78px;
+        width: 520px;
         object-fit: contain;
         border-radius: 30px;
     }
 
+}
 
-    div {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        cursor: pointer;
+// next project area bottom right
+.nextProject {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 56px;
+    right: 56px;
 
-        &:hover {
-            span {
-                color: rgba(61, 207, 182, 1);
-            }
+    &:hover {
+        span {
+            color: rgba(61, 207, 182, 1);
+        }
 
-            img {
-                transform: scale(1.2);
-                transition: transform 0.2s ease;
-            }
+        img {
+            transform: scale(1.2);
+            transition: transform 0.2s ease;
         }
     }
 }
 
+// close button top right
+.closeLogo {
+    width: 17.85px;
+    height: 17.85px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: absolute;
+    top: 56px;
+    right: 56px;
+
+    &:hover {
+        transform: scale(1.3);
+        transition: transform 0.2s ease;
+    }
+}
+
+
+
+
 @media (min-width:320px) and (max-width:650px) {
     .projectDescription {
-        padding: 24px;
+        padding: 12px;
         flex-direction: column-reverse; // test
         align-items: self-start;
         height: 100vh;
         width: 100vw;
         position: relative;
 
-        .testProject {
-            width: 100%;
+        .TextButtonImageArea {
 
-            .projectText {
+            flex-direction: column-reverse;
+            padding-bottom: 42px;
 
-                >p {
-                    font-size: 16px;
+
+            .testProject {
+                width: 100%;
+
+                .usedTechStack {
+                    flex-wrap: wrap;
+                    gap: 20px;
                 }
-
-                >span {
-                    font-size: 20px;
+    
+                .projectText {
+    
+                    >p {
+                        font-size: 16px;
+                    }
+    
+                    >span {
+                        font-size: 20px;
+                    }
+                }
+    
+    
+                .testProjectHeadline {
+    
+    
+                    h1 {
+                        font-size: 72px;
+                    }
+    
+                    h2 {
+                        font-size: 56px;
+                    }
                 }
             }
-
-
-            .testProjectHeadline {
-
-
-                h1 {
-                    font-size: 72px;
+    
+    
+            .imageProject {
+                height: unset;
+                width: unset;
+    
+                .imageLogo {
+                    width: 80vw;
                 }
-
-                h2 {
-                    font-size: 56px;
-                }
+    
+                
             }
         }
 
-
-        .imageProject {
-            width: 100%;
-
-            .imageLogo {
-                width: 250px;
-            }
-
-            .closeLogo {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-        }
+        
 
 
+    }
+
+    .closeLogo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .nextProject {
+        bottom: 20px;
+        right: 20px;
     }
 }
