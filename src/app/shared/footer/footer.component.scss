@@ -111,3 +111,9 @@ footer {
         }
     }
 }
+
+@media (min-width: 700px) and (max-width: 1030px) {
+    footer {
+        padding: 40px 16px;
+    }
+}

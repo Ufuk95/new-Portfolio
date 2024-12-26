@@ -151,3 +151,25 @@ app-project {
         }
     }
 }
+
+// tablet responsive
+@media (min-width: 700px) and (max-width: 1030px) {
+    .fullBodyPortfolio {
+        padding: 32px 96px;
+
+        div {
+
+            >h1 {
+                font-size: 56px;
+            }
+        }
+
+        .myProjects {
+
+            .project {
+                width: 100%;
+            }
+        }
+    }
+}
+  

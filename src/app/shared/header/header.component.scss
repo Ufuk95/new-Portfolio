@@ -118,7 +118,9 @@ header {
     display: none;
 }
 
-@media (min-width: 320px) and (max-width: 695px) {
+
+// Smartphones responsive
+@media (min-width: 320px) and (max-width: 700px) {
     header {
         display: none;
     }
@@ -251,5 +253,13 @@ header {
     p {
         margin-block-start: 0;
         margin-block-end: 0;
+    }
+}
+
+
+// Tablet Responsive
+@media (min-width: 700px) and (max-width: 1030px){
+    header {
+        padding: 16px;
     }
 }

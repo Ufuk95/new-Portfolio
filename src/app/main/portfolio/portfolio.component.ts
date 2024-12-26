@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component, Renderer2, HostListener, OnInit } from '@angular/core';
 import { portfolioProject } from '../../shared/ALL_PROJECTS';
 import { ProjectComponent } from './project/project.component';
 
@@ -11,16 +11,31 @@ import { ProjectComponent } from './project/project.component';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
+
   isJoinHovered = false;
   isPolloLocoHovered = false;
   isPokedexHovered = false;
+  isSmallScreen = false;
 
   allProjects = portfolioProject;
   selectedProject: any = null; // Aktuell ausgewähltes Projekt
   currentIndex = 0;
 
   constructor(private renderer: Renderer2) {}
+
+  ngOnInit() {
+    this.checkScreenSize();
+  }
+
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  private checkScreenSize() {
+    this.isSmallScreen = window.innerWidth <= 1030;
+  }
 
   // Setzt das aktuell ausgewählte Projekt
   selectProjectByName(projectName: string) {

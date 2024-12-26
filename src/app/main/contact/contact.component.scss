@@ -283,3 +283,13 @@ p {
         }
     }
 }
+
+@media (min-width: 700px) and (max-width: 1030px) {
+    .contactFullBody {
+        flex-direction: column;
+
+        .leftSide .headline h1 {
+            font-size: 56px;
+        }
+    }
+}

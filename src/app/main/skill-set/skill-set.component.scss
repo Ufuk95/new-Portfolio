@@ -214,3 +214,25 @@ p {
         }
     }
 }
+
+@media (min-width: 700px) and (max-width: 1030px) {
+    .fullBodySkillset {
+        flex-direction: column;
+
+        .leftside {
+            padding: unset;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >p {
+                position: relative;
+                right: 185px;
+            }
+        }
+
+        .rightside {
+            padding: 16px 96px;
+        }
+    }
+}
