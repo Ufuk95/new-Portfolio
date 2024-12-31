@@ -17,6 +17,7 @@ export class PortfolioComponent implements OnInit {
   isPolloLocoHovered = false;
   isPokedexHovered = false;
   isSmallScreen = false;
+  isPortfolioHovered = false;
 
   allProjects = portfolioProject;
   selectedProject: any = null; // Aktuell ausgewähltes Projekt

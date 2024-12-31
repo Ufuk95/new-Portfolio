@@ -36,7 +36,7 @@ export class ProjectComponent {
   }
 
   changeProject() {
-    const nextIndex = (this.currentIndex + 1) % 3;
+    const nextIndex = (this.currentIndex + 1) % 4;
     this.projectChange.emit(nextIndex); 
   }
 }

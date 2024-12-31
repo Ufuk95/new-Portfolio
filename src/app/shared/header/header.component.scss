@@ -258,8 +258,35 @@ header {
 
 
 // Tablet Responsive
-@media (min-width: 700px) and (max-width: 1030px){
+@media (min-width: 700px) and (max-width: 1030px) {
     header {
         padding: 16px;
+    }
+}
+
+
+.burger-menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    &.visible {
+        display: flex;
+    }
+
+    &.hidden {
+        display: none;
     }
 }

@@ -22,19 +22,9 @@
 <div class="d-none headerResponsive">
     <img class="small_Logo" src="/img/small-logo.png" alt="small-logo">
     <img src="/img/landingpage/menu_icon.svg" alt="menu_icon" (click)="openHeaderContainer()">
+</div>
 
-    <!-- Der linkContainer wird nur angezeigt, wenn isLinkContainerVisible true ist -->
-    <div class="linkContainer" [class.visible]="isLinkContainerVisible" [class.hidden]="!isLinkContainerVisible">
-        <a class="link" href="#aboutMe">About me</a>
-        <a class="link" href="#skill">Skills</a>
-        <a class="link" href="#portfolio">Projects</a>
-        <div class="languageChange">
-            <div class="EN" [class.active]="isEngActive" (click)="setActiveLanguage('EN')">
-                <p>EN</p>
-            </div>
-            <div class="DE" [class.active]="isGerActive" (click)="setActiveLanguage('DE')">
-                <p>DE</p>
-            </div>
-        </div>
-    </div>
+
+<div class="burger-menu" [class.visible]="isLinkContainerVisible" [class.hidden]="!isLinkContainerVisible" (click)="onBurgerMenuClick($event)">
+    <app-burger-menu />
 </div>

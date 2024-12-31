@@ -17,7 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        overflow: hidden;
 
         .testProject {
             display: flex;
@@ -263,5 +263,24 @@
     .nextProject {
         bottom: 20px;
         right: 20px;
+    }
+}
+
+@media (min-width:950px) and (max-width:1170px) {
+    .imageProject {
+
+        .imageLogo {
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width:650px) and (max-width:950px) {
+    .imageProject {
+        display: none;
+    }
+
+    .projectDescription .TextButtonImageArea .testProject {
+        width: 100%;
     }
 }

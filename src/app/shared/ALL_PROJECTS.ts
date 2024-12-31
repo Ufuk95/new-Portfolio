@@ -28,5 +28,15 @@ export const portfolioProject = [
       image: '/img/portfolio/pokedex.png',
       link: 'https://pokemon.ufuk-oezsahin.de/',
       git: 'https://github.com/Ufuk95/new-Pok-dex'
+    },
+    {
+      id: '04',
+      name: 'Portfolio',
+      description: 'My very first Portfolio with Angular.',// Text weiter ergänzen
+      techStack: ['HTML', 'SCSS', 'Typescript', 'Angular'],
+      stackLogo: ['/img/portfolio/blueHTML.svg', '/img/portfolio/blueCSS.svg', '/img/portfolio/blueTS.svg', '/img/portfolio/blueAngular.svg'],
+      image: '/img/portfolio/oldPortfolio.png',
+      link: 'https://oldportfolio.ufuk-oezsahin.de/',
+      git: 'https://github.com/Ufuk95/Portfolio'
     }
 ]

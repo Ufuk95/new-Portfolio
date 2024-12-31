@@ -45,7 +45,7 @@
                 </div>
               
                 <div class="projectContainer" (click)="selectProjectByName('Pokédex')">
-                  <div class="project lastProject" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
+                  <div class="project" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
                     <span>Pokédex</span>
                     <div>
                       <span>HTML</span>
@@ -58,6 +58,22 @@
                     </div>
                   </div>
                   <img src="/img/portfolio/pokedex.png" alt="Pokedex image" *ngIf="isPokedexHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
+                </div>
+
+                <div class="projectContainer" (click)="selectProjectByName('Portfolio')">
+                  <div class="project lastProject" (mouseenter)="isPortfolioHovered = true" (mouseleave)="isPortfolioHovered = false">
+                    <span>Portfolio(old)</span>
+                    <div>
+                      <span>HTML</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>SCSS</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>Typescript</span>
+                      <img src="/img/portfolio/|.svg" alt="|">
+                      <span>Angular</span>
+                    </div>
+                  </div>
+                  <img src="/img/portfolio/oldPortfolio.png" alt="last Portfolio" *ngIf="isPortfolioHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
                 </div>
               </div>
               
