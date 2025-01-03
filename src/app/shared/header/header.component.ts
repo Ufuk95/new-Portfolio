@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { BurgerMenuComponent } from "./burger-menu/burger-menu.component";
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, BurgerMenuComponent],
+  imports: [CommonModule, BurgerMenuComponent, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -15,14 +16,24 @@ export class HeaderComponent {
   isEngActive = true;
   isGerActive = false;
 
+  constructor(private translate: TranslateService){
+    this.translate.setDefaultLang("en");
+  }
+
+  switchLanguage(language: string){
+    this.translate.use(language)
+  }
+
   setActiveLanguage(language: string): void {
-    if (language === 'EN') {
+    if (language === 'en') {
       this.isEngActive = true;
       this.isGerActive = false;
-    } else if (language === 'DE') {
+    } else if (language === 'de') {
       this.isEngActive = false;
       this.isGerActive = true;
     }
+
+    this.switchLanguage(language);
   }
 
   openHeaderContainer(): void {

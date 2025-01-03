@@ -1,0 +1,90 @@
+{
+    "LANDINGPAGE": {
+        "CHECK": "Check my work",
+        "CONTACT": "Contact me"
+    },
+    "ABOUT-ME": {
+      "HEADER": "About me",
+      "CONTENT": "As a frontend developer based in Hamburg, Germany, I help designers and companies bring their ideas to life. I am very passionate about turning new ideas or concepts from templates into technically sound and functional websites.",
+      "CALL-TO-ACTION": "If you think I would be a good fit for your project, please contact me.",
+      "LET-US-TALK": "Let's talk"
+    },
+  
+    "PORTFOLIO": {
+      "CONTENT": "Explore a selection of my work here - interact with projects to see my skill in action",
+      "JOIN-TEXT": "Task manager inspired by the Kanban System",
+      "LOCO-TEXT": "Jump and Run. Based on Object Oriented Programming"
+    },
+  
+    "CONTACT": {
+      "DISCUSS-PROJECT": "Want to discuss a new project?", 
+      "DO-IT": "Let's discuss your ideas and make it happen!",
+      "SUCCESS-MSG": "Message has been sent"
+    },
+  
+    "FORM": {
+      "PLACEHOLDER": {
+        "NAME": "Your Name",
+        "MAIL": "Your Email",
+        "MESSAGE": "Your Message"
+      }
+    },
+  
+    "WARNING": {
+      "NAME": "Please enter a name",
+      "MAIL": "Please enter a valid email",
+      "MESSAGE": "Please enter a message"
+    }, 
+  
+    "PRIVACY-POLICY": {
+      "PART-A": "I've read the",
+      "PART-B": "privacy policy",
+      "PART-C": "and agree to the processing of my data as outlined",
+      "ACCEPT-MSG": "Please accept the privacy policy."
+    },
+  
+    "SEND-MESSAGE": "Send message",
+  "PRIVACY_POLICY_TITLE": "Privacy Policy",
+    "PRIVACY_POLICY_INTRO": "In this privacy policy, we inform you about the processing of personal data when using this website.",
+    "RESPONSIBLE_TITLE": "Responsible",
+    "RESPONSIBLE_INFO": "Responsible for data processing is:<br><em>Peter Ediger, Marnitzstraße 20b 21033 Hamburg, info@peter-ediger.de</em>",
+    "PERSONAL_DATA_TITLE": "Personal Data",
+    "PERSONAL_DATA_INFO": "Personal data is all information that relates to an identified or identifiable natural person (data subject). A natural person is considered identifiable if they can be identified directly or indirectly, particularly by means of an identifier such as a name, an identification number, location data, an online identifier, or one or more specific characteristics that are an expression of the physical, physiological, genetic, psychological, economic, cultural, or social identity of this natural person.",
+    "DATA_ON_WEBSITE_CALL_TITLE": "Data When Visiting the Website",
+    "DATA_ON_WEBSITE_CALL_INFO": "If you use this website only to obtain information and do not provide any data, we only process the data that is necessary to display the website on the internet-enabled device you are using. This includes in particular:",
+    "DATA_ON_WEBSITE_CALL_LIST": {
+      "IP_ADDRESS": "IP address",
+      "REQUEST_DATE_TIME": "Date and time of the request",
+      "TRANSFERRED_DATA_AMOUNT": "Amount of data transferred each time",
+      "REFERRER_WEBSITE": "The website from which the request comes",
+      "BROWSER_TYPE_VERSION": "Browser type and version",
+      "OPERATING_SYSTEM": "Operating system"
+    },
+    "LEGAL_BASIS_INFO": "The legal basis for processing this data is legitimate interests pursuant to Art. 6 para. 1 lit. f) GDPR, to enable the presentation of the website fundamentally.",
+    "ADDITIONAL_SERVICES_INFO": "In addition, you can use various services on the website where further personal and non-personal data is processed.",
+    "YOUR_RIGHTS_TITLE": "Your Rights",
+    "YOUR_RIGHTS_INFO": "As a data subject, you have the following rights:",
+    "YOUR_RIGHTS_LIST": {
+      "ACCESS_RIGHT": "You have the right to obtain information about the personal data concerning you that the controller processes (Art. 15 GDPR),",
+      "RECTIFICATION_RIGHT": "You have the right to rectification of the data concerning you if it is incorrect or incomplete (Art. 16 GDPR),",
+      "ERASURE_RIGHT": "You have the right to erasure (Art. 17 GDPR),",
+      "RESTRICTION_RIGHT": "You have the right to request the restriction of the processing of your personal data (Art. 18 GDPR),",
+      "DATA_PORTABILITY_RIGHT": "You have the right to data portability (Art. 20 GDPR),",
+      "OBJECTION_RIGHT": "You have the right to object to the processing of your personal data (Art. 21 GDPR),",
+      "AUTOMATED_DECISION_RIGHT": "You have the right not to be subject to a decision based solely on automated processing – including profiling – that produces legal effects concerning you or similarly significantly affects you (Art. 22 GDPR),",
+      "COMPLAINT_RIGHT": "You have the right to lodge a complaint with a supervisory authority if you suspect a violation of data protection law (Art. 77 GDPR). The competent authority is the supervisory authority at your habitual residence, workplace, or the place of the alleged violation."
+    },
+    "SOURCE": "Source",
+    "SOURCE_LINK": "Sample Privacy Policy from anwalt.de",
+  
+    "FOOTER": {
+      "IMPRINT": "imprint"
+    },
+    
+    "IMPRINT": {
+      "IMPRINT": "Imprint",
+      "CONTACT": "Contact"
+    } 
+  
+  
+  }
