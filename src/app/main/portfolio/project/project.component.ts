@@ -22,7 +22,7 @@ export class ProjectComponent {
   @Input({required: true}) image!: string;
   @Input({required: true}) link!: string;
   @Input({required: true}) git!: string;
-  @Input() currentIndex!: number; // Aktueller Index des Projekts
+  @Input() currentIndex!: number;
   @Output() projectChange = new EventEmitter<number>(); // Event für den Wechsel des Projekts
   @Output() select = new EventEmitter<string>();
 

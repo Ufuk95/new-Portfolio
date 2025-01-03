@@ -32,7 +32,7 @@ export const portfolioProject = [
     {
       id: '04',
       name: 'Portfolio',
-      description: 'My very first Portfolio with Angular.',// Text weiter ergänzen
+      description: 'My very first Project with Angular which is also my first Portfolio.',// Text weiter ergänzen
       techStack: ['HTML', 'SCSS', 'Typescript', 'Angular'],
       stackLogo: ['/img/portfolio/blueHTML.svg', '/img/portfolio/blueCSS.svg', '/img/portfolio/blueTS.svg', '/img/portfolio/blueAngular.svg'],
       image: '/img/portfolio/oldPortfolio.png',

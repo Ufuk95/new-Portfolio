@@ -45,6 +45,7 @@ export class PortfolioComponent implements OnInit {
     this.isJoinHovered = false;
     this.isPolloLocoHovered = false;
     this.isPokedexHovered = false;
+    this.isPortfolioHovered = false;
   }
 
   // Schließt die Detailansicht

@@ -26,6 +26,7 @@
             height: 100%;
             overflow: hidden;
             gap: 40px;
+            padding-right: 8px;
 
             .testProjectHeadline {
                 display: flex;
@@ -140,7 +141,7 @@
 
 
     .imageLogo {
-        width: 520px;
+        width: 100%;
         object-fit: contain;
         border-radius: 30px;
     }

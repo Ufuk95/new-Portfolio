@@ -14,7 +14,7 @@ export class MouseShadowDirective {
     this.renderer.setStyle(this.shadowElement, 'width', '100px');
     this.renderer.setStyle(this.shadowElement, 'height', '100px');
     this.renderer.setStyle(this.shadowElement, 'border-radius', '50%');
-    this.renderer.setStyle(this.shadowElement, 'filter', 'blur(30px)');
+    this.renderer.setStyle(this.shadowElement, 'filter', 'blur(35px)');
     this.renderer.setStyle(this.shadowElement, 'background-color', 'rgba(61, 207, 182, 0.5)');
     this.renderer.setStyle(this.shadowElement, 'pointer-events', 'none');
     this.renderer.setStyle(this.shadowElement, 'transform', 'translate(-50%, -50%)');
@@ -29,7 +29,6 @@ export class MouseShadowDirective {
   }
 
   ngOnDestroy(): void {
-    // Schatten-Element entfernen, wenn die Directive zerstört wird
     this.renderer.removeChild(document.body, this.shadowElement);
   }
 }
