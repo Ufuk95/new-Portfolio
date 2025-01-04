@@ -1,40 +1,30 @@
 {
-    "LANDINGPAGE": {
-        "CHECK": "Check my work",
-        "CONTACT": "Contact me"
-    },
-    "ABOUT-ME": {
-
-    },
-  
-    "PORTFOLIO": {
-
-    },
-  
-    "CONTACT": {
-
-    },
-  
-    "FORM": {
-
-    },
-  
-    "WARNING": {
-
-    }, 
-  
-    "PRIVACY-POLICY": {
-
-    },
-  
-    "FOOTER": {
-      "IMPRINT": "imprint"
-    },
-    
-    "IMPRINT": {
-      "IMPRINT": "Imprint",
-      "CONTACT": "Contact"
-    } 
-  
-  
+  "HEADER": {
+    "ABOUTME": "About me",
+    "SKILLS": "Skills",
+    "PROJECT": "Projects"
+  },
+  "LANDINGPAGE": {
+    "CHECK": "Check my work",
+    "CONTACT": "Contact me",
+    "SCROLLWRAPPER": {
+      "REMOTE": "Available for remote work",
+      "FRONTEND": "Frontend Developer",
+      "BASED": "Based in Ingolstadt",
+      "OPEN": "Open to work"
+    }
+  },
+  "ABOUT-ME": {},
+  "PORTFOLIO": {},
+  "CONTACT": {},
+  "FORM": {},
+  "WARNING": {},
+  "PRIVACY-POLICY": {},
+  "FOOTER": {
+    "IMPRINT": "imprint"
+  },
+  "IMPRINT": {
+    "IMPRINT": "Imprint",
+    "CONTACT": "Contact"
   }
+}

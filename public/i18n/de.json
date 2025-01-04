@@ -1,14 +1,24 @@
 {
+  "HEADER": {
+    "ABOUTME": "Über mich",
+    "SKILLS": "Kompetenzen",
+    "PROJECT": "Projekte"
+  },
   "LANDINGPAGE": {
     "CHECK": "Meine Projekte",
-    "CONTACT": "schreib mir"
+    "CONTACT": "Schreib mir",
+    "SCROLLWRAPPER": {
+      "REMOTE": "Verfügbar für Remote-Arbeit",
+      "FRONTEND": "Frontend Entwickler",
+      "BASED": "Ansässig in Ingolstadt",
+      "OPEN": "Offen für neue Herausforderungen"
+    }
   },
   "ABOUT-ME": {},
   "PORTFOLIO": {},
   "CONTACT": {},
   "WARNING": {},
   "PRIVACY-POLICY": {},
-  
   "FOOTER": {
     "IMPRINT": "Impressum"
   },

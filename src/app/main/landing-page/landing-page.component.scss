@@ -137,44 +137,50 @@ footer {
     transform: rotate(-3deg);
     transform-origin: left bottom;
     max-width: 1920px;
-
+  
     .scroll-wrapper {
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        overflow: hidden;
-        position: relative;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      position: relative;
     }
-
+  
     .scroll-content {
-        display: flex;
-        align-items: center;
-        animation: scroll-linear 13s linear infinite;
-        will-change: transform;
+      display: flex;
+      align-items: center;
+      animation: scroll-linear 13s linear infinite;
+      will-change: transform;
     }
-
+  
     .padding {
-        padding-left: 28px;
-        padding-right: 28px;
+      padding-left: 28px;
+      padding-right: 28px;
     }
-
+  
     p {
-        color: rgba(61, 207, 182, 1);
-        font-size: 32px;
-        margin: 0;
-        font-family: "Karla";
+      color: rgba(61, 207, 182, 1);
+      font-size: 32px;
+      margin: 0;
+      font-family: "Karla";
     }
-
+  
+    /* Animation */
     @keyframes scroll-linear {
-        from {
-            transform: translateX(0);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-100%);
+      }
     }
-}
+  
+    /* Zusätzlicher Stil für Duplizierung */
+    .scroll-wrapper {
+      width: 200%; /* Platz für den Original- und Duplikatinhalt */
+    }
+  }
+  
 
 
 
