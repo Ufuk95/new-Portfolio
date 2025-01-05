@@ -12,6 +12,4 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class LandingPageComponent {
   email = "info@ufuk-oezsahin.de";
-
-  // Keine ngAfterViewInit-Methode mehr nötig
 }

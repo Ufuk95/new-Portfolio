@@ -1,16 +1,10 @@
 <div class="fullBodyPortfolio">
     <div>
-        <p>
-            Portfolio
-        </p>
+        <p>Portfolio</p>
 
-        <h1>
-            Featured Projects
-        </h1>
+        <h1>{{ "PORTFOLIO.FEATURE" | translate }}</h1>
 
-        <span>
-            Explore a selection of my work here - Interact with <br>projects to see my skills in action.
-        </span>
+        <span>{{ "PORTFOLIO.EXPLORE1" | translate }} <br>{{ "PORTFOLIO.EXPLORE2" | translate }}</span>
 
         <div class="myProjects">
             <div *ngIf="!selectedProject">

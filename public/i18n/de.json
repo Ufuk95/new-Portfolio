@@ -14,8 +14,32 @@
       "OPEN": "Offen für neue Herausforderungen"
     }
   },
-  "ABOUT-ME": {},
-  "PORTFOLIO": {},
+  "ABOUT-ME": {
+    "WHOIAM": "Wer bin Ich",
+    "ABOUTME": "Über mich",
+    "INTRODUCTION": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler aus Ingolstadt. Motiviert von den grenzenlosen Möglichkeiten in der IT, begeistert es mich, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.",
+    "ENVIRONMENT": "Ich bin flexibel in Bezug auf Arbeitsumgebungen und Standorte. Ich kann sowohl vor Ort in Ingolstadt, remote als auch bei Bedarf an einem anderen Standort arbeiten.",
+    "OPENMIND": "Ich bin aufgeschlossen und stets auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten kontinuierlich zu verbessern.",
+    "PROFESSION": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+  },
+  "SKILL-SET": {
+    "TECHNOLOGIES": "Technologien",
+    "SKILLSET": "Fähigkeiten",
+    "JOURNEY": "Mein Weg umfasst die Arbeit an verschiedenen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung einen Schritt voraus zu bleiben.",
+    "NEED": "Sie brauchen",
+    "ANOTHERSKILL": "eine andere Fähigkeit?",
+    "CONTACTME": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+    "TALK": "Schreib mir"
+  },
+  "PORTFOLIO": {
+    "FEATURE": "Hervorgehobene Projekte",
+    "EXPLORE1": "Entdecken Sie eine Auswahl meiner Arbeiten hier – Interagieren Sie mit",
+    "EXPLORE2": "Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "PROJECT": {
+      "ABOUT": "Worum geht es in diesem Projekt?",
+      "NEXT": "Nächstes Projekt"
+    }
+  },
   "CONTACT": {},
   "WARNING": {},
   "PRIVACY-POLICY": {},
