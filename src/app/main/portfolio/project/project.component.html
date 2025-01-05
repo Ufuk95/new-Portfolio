@@ -12,16 +12,16 @@
                 <h2>{{ name }}</h2>
             </div>
             <div class="projectText">
-                <span>{{"PORTFOLIO.PROJECT.ABOUT" | translate}}</span>
-                <p>{{ description }}</p>
+                <span>{{ "PORTFOLIO.PROJECT.ABOUT" | translate }}</span>
+                <p>{{ translatedDescription }}</p> <!-- Zeigt die korrekte Beschreibung je nach Sprache -->
                 <div class="usedTechStack">
-                    <!-- Dynamische Generierung des Tech-Stacks -->
-                    <div *ngFor="let tech of techStack; let i = index">
-                        <img [src]="stackLogo[i]" [alt]="tech">
-                        <span>{{ tech }}</span>
-                    </div>
+                  <div *ngFor="let tech of techStack; let i = index">
+                    <img [src]="stackLogo[i]" [alt]="tech">
+                    <span>{{ tech }}</span>
+                  </div>
                 </div>
-            </div>
+              </div>
+              
     
             <div class="testingGitButton">
                 <a [href]="link"><button>Github <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
