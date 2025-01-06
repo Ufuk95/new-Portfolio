@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  imports: [CommonModule, FormsModule, HttpClientModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
@@ -35,6 +36,9 @@ export class ContactComponent {
       },
     },
   };
+
+  constructor(private translate: TranslateService) {}
+
 
   get CheckboxImage(): string {
     if (this.isCheckboxChecked) {
@@ -92,7 +96,10 @@ export class ContactComponent {
         },
         error: (error) => {
           console.error('Error:', error);
-          this.errorMessage = 'An error occurred. Please try again later.';
+          // Setze die übersetzte Fehlermeldung
+          this.translate.get('CONTACT.CHECKBOX.ERROR').subscribe((translation: string) => {
+            this.errorMessage = translation;
+          });
           this.resetFormState(form); // sollte später wieder gelöscht werden nachdem das senden funktioniert 
         },
       });
@@ -103,10 +110,11 @@ export class ContactComponent {
     }
   }
   
+  
   private resetFormState(form: NgForm): void {
-    form.resetForm(); // Eingabefelder und Validierungszustände zurücksetzen
-    this.contactData = { name: '', email: '', message: '' }; // Sicherstellen, dass die Daten leer sind
-    this.isCheckboxChecked = false; // Checkbox zurücksetzen
-    this.formSubmitted = false; // Validierungsstatus zurücksetzen, um Fehlermeldungen zu vermeiden
+    form.resetForm();
+    this.contactData = { name: '', email: '', message: '' };
+    this.isCheckboxChecked = false;
+    this.formSubmitted = false;
   }
 }

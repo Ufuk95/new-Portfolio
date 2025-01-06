@@ -24,7 +24,7 @@
   },
   "SKILL-SET": {
     "TECHNOLOGIES": "Technologien",
-    "SKILLSET": "Fähigkeiten",
+    "SKILLSET": "Meine Stärken",
     "JOURNEY": "Mein Weg umfasst die Arbeit an verschiedenen Projekten, bei denen ich eine Vielzahl von Frontend-Technologien und Konzepten eingesetzt habe. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung einen Schritt voraus zu bleiben.",
     "NEED": "Sie brauchen",
     "ANOTHERSKILL": "eine andere Fähigkeit?",
@@ -32,7 +32,7 @@
     "TALK": "Schreib mir"
   },
   "PORTFOLIO": {
-    "FEATURE": "Hervorgehobene Projekte",
+    "FEATURE": "Meine Projekte",
     "EXPLORE1": "Entdecken Sie eine Auswahl meiner Arbeiten hier – Interagieren Sie mit",
     "EXPLORE2": "Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     "PROJECT": {
@@ -40,7 +40,34 @@
       "NEXT": "Nächstes Projekt"
     }
   },
-  "CONTACT": {},
+  "CONTACT": {
+    "ME": "Kontaktiere mich",
+    "TOGETHER": "Lass uns Zusammen arbeiten",
+    "PROBLEM": "Hast du ein Problem zu lösen?",
+    "INTEREST": "Kontaktiere mich über dieses Formular. Ich freue mich darauf, von dir zu hören, deine Ideen kennenzulernen und mit meiner Arbeit zu deinen Projekten beizutragen.",
+    "NEED": "Benötigst du einen Frontend-Entwickler?",
+    "TALK": "Lass uns reden!",
+    "FORM": {
+      "NAME": "Wie ist dein Name?",
+      "PLACEHOLDER-NAME": "Dein Name kommt hierhin",
+      "ERROR-NAME": "Name ist erforderlich!",
+      "MAIL": "Wie lautet deine E-Mail?",
+      "PLACEHOLDER-MAIL": "deine-email@email.com",
+      "ERROR-MAIL": "Bitte gib eine gültige E-Mail-Adresse ein!",
+      "TEXTAREA": "Wie kann ich dir helfen?",
+      "PLACEHOLDER-TEXTAREA": "Hallo Ufuk, ich interessiere mich für...",
+      "ERROR-TEXTAREA": "Nachricht ist erforderlich!"
+    },
+    "CHECKBOX": {
+      "READ": "Ich habe die ",
+      "POLICY": "Datenschutzerklärung",
+      "READ2": "gelesen und stimme der Verarbeitung meiner Daten gemäß den angegebenen Richtlinien zu.",
+      "ACCEPT": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren.",
+      "BUTTON": "Sag Hallo :)",
+      "SUCCES": "Ihre Nachricht wurde erfolgreich gesendet!",
+      "ERROR": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+    }
+  },
   "WARNING": {},
   "PRIVACY-POLICY": {},
   "FOOTER": {

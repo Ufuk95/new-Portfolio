@@ -40,7 +40,36 @@
       "NEXT": "Next project"
     }
   },
-  "CONTACT": {},
+  "CONTACT": {
+    "ME": "Contact me",
+    "TOGETHER": "Let's work together",
+    "PROBLEM": "Got a problem to solve?",
+    "INTEREST": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+    "NEED": "Need a Frontend developer?",
+    "TALK": "Let’s talk!",
+    "FORM": {
+      "NAME": "What's your name?",
+      "PLACEHOLDER-NAME": "Your name goes here",
+      "ERROR-NAME": "Name is required.",
+
+      "MAIL": "What's your email?",
+      "PLACEHOLDER-MAIL": "your-email@email.com",
+      "ERROR-MAIL": "Please enter a valid email address.",
+
+      "TEXTAREA": "How can I help you?",
+      "PLACEHOLDER-TEXTAREA": "Hello Ufuk, I am interested in...",
+      "ERROR-TEXTAREA": "Message is required."
+    },
+    "CHECKBOX": {
+      "READ": "I've read the ",
+      "POLICY": "privacy policy",
+      "READ2": "and agree to the processing of my data as outlined.",
+      "ACCEPT": "You must accept the privacy policy to proceed.",
+      "BUTTON": "Say Hello :)",
+      "SUCCES": "Your message has been sent successfully!",
+      "ERROR": "An error occurred. Please try again later."
+    }
+  },
   "FORM": {},
   "WARNING": {},
   "PRIVACY-POLICY": {},

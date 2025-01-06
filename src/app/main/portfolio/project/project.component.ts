@@ -36,17 +36,13 @@ export class ProjectComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
-    // Setze die Standard-Sprache auf Englisch, wenn noch keine Sprache gesetzt wurde
     if (!this.translate.currentLang) {
       this.translate.use('en');
     }
-
-    // Übernehme die aktuelle Sprache von TranslateService
     this.currentLanguage = this.translate.currentLang as 'en' | 'de'; 
   }
 
   get translatedDescription() {
-    // Rückgabe der Beschreibung basierend auf der aktuellen Sprache
     return this.description[this.currentLanguage]; 
   }
 
