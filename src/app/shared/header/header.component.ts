@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { BurgerMenuComponent } from "./burger-menu/burger-menu.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, BurgerMenuComponent, TranslateModule],
+  imports: [CommonModule, BurgerMenuComponent, TranslateModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

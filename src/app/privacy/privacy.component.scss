@@ -1,0 +1,42 @@
+div {
+    padding: 130px 32px 0px;
+    position: relative;
+    word-break: break-word;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(61, 207, 182); // Definiert die Farbe der Headlines
+}
+
+strong {
+    font-size: 17px;
+}
+
+
+a {
+    color: rgb(61, 207, 182);
+    text-decoration: none;
+
+    &:hover {
+        color: white;
+        text-decoration: underline;
+    }
+}
+
+p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+strong {
+    color: rgba(255, 255, 255);
+}
+
+li {
+    color: rgba(255, 255, 255, 0.9);
+}

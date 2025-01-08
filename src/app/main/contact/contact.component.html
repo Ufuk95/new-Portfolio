@@ -45,7 +45,7 @@
           <img [src]="CheckboxImage" (mouseenter)="isCheckboxHovered = true" (mouseleave)="isCheckboxHovered = false"
             (click)="toggleCheckbox()" alt="checkbox" />
           <p [class.error]="!isCheckboxChecked && formSubmitted">{{"CONTACT.CHECKBOX.READ" | translate}} 
-            <a class="privacyLink" href="#">{{"CONTACT.CHECKBOX.POLICY" | translate}}</a> {{"CONTACT.CHECKBOX.READ2" | translate}}</p>
+            <a class="privacyLink" routerLink="privacy">{{"CONTACT.CHECKBOX.POLICY" | translate}}</a> {{"CONTACT.CHECKBOX.READ2" | translate}}</p>
           <span *ngIf="!isCheckboxChecked && formSubmitted" class="warning">{{"CONTACT.CHECKBOX.ACCEPT" | translate}}</span>
         </div>
         <div>

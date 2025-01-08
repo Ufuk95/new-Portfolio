@@ -68,8 +68,89 @@
       "ERROR": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
     }
   },
+  "PRIVACY-POLICY": {
+    "1": {
+      "TITLE": "Datenschutzerklärung",
+      "OVERVIEW": {
+        "TITLE": "1. Datenschutz auf einen Blick",
+        "GENERAL": {
+          "TITLE": "Allgemeine Informationen",
+          "TEXT": "Die folgenden Informationen bieten einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Detaillierte Informationen zum Thema Datenschutz finden Sie in der untenstehenden Datenschutzerklärung."
+        },
+        "DATA-COLLECTION": {
+          "TITLE": "Datenerhebung auf unserer Website",
+          "WHO": "Wer ist für die Datenerhebung auf dieser Website verantwortlich?",
+          "WHO-DETAIL": "Die Datenverarbeitung auf dieser Website erfolgt durch den Betreiber der Website. Die Kontaktdaten des Betreibers finden Sie im Impressum der Website.",
+          "HOW": "Wie erheben wir Ihre Daten?",
+          "HOW-DETAIL": "Einige Daten werden erhoben, wenn Sie uns diese zur Verfügung stellen. Dies kann zum Beispiel Daten sein, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch durch unsere IT-Systeme erhoben, wenn Sie die Website besuchen. Diese Daten sind hauptsächlich technische Daten (z. B. der von Ihnen verwendete Browser und das Betriebssystem oder der Zeitpunkt des Zugriffs auf die Seite). Diese Daten werden automatisch erhoben, sobald Sie unsere Website betreten.",
+          "WHY": "Wofür nutzen wir Ihre Daten?",
+          "WHY-DETAIL": "Ein Teil der Daten wird erhoben, um die ordnungsgemäße Funktion der Website zu gewährleisten. Andere Daten können dazu verwendet werden, zu analysieren, wie Besucher die Seite nutzen.",
+          "RIGHTS": {
+            "TITLE": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+            "TEXT": "Sie haben jederzeit das Recht, Auskunft über Ihre gespeicherten Daten, deren Herkunft, Empfänger und den Zweck der Erhebung unentgeltlich zu erhalten. Sie haben auch das Recht, die Berichtigung, Sperrung oder Löschung dieser Daten zu verlangen. Sie können uns jederzeit unter der im Impressum angegebenen Adresse kontaktieren, wenn Sie weitere Fragen zum Thema Datenschutz haben. Sie können auch jederzeit eine Beschwerde bei den zuständigen Aufsichtsbehörden einreichen."
+          }
+        }
+      }
+    },
+    "2": {
+      "TITLE": "2. Allgemeine Informationen und Pflichtinformationen",
+      "DATA-PROTECTION": {
+        "TITLE": "Datenschutz",
+        "TEXT": "Die Betreiber dieser Website nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Wenn Sie diese Website nutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Diese Datenschutzerklärung erklärt, welche Informationen wir erheben und wofür wir diese verwenden. Sie erklärt auch, wie und zu welchem Zweck dies geschieht. Bitte beachten Sie, dass Daten, die über das Internet übertragen werden (z. B. über E-Mail-Kommunikation), Sicherheitslücken aufweisen können. Ein vollständiger Schutz Ihrer Daten vor dem Zugriff Dritter ist nicht möglich."
+      },
+      "RESPONSIBILITY": {
+        "TITLE": "Hinweis zur verantwortlichen Stelle für diese Website",
+        "DETAILS": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+        "LEGAL": "Die verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung personenbezogener Daten (z. B. Namen, E-Mail-Adressen) entscheidet."
+      },
+      "RIGHTS": {
+        "REVOKE-CONSENT": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+        "REVOKE-CONSENT-TEXT": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Eine informelle E-Mail, in der Sie diesen Antrag stellen, ist hierfür ausreichend. Die Daten, die vor dem Eingang Ihrer Anfrage verarbeitet wurden, können jedoch weiterhin rechtmäßig verarbeitet werden.",
+        "DATA-PORTABILITY": "Recht auf Datenübertragbarkeit",
+        "DATA-PORTABILITY-TEXT": "Sie haben das Recht, dass Daten, die wir auf Grundlage Ihrer Einwilligung oder zur Erfüllung eines Vertrages verarbeiten, in einem gängigen, maschinenlesbaren Format automatisch an sich selbst oder an einen Dritten übermittelt werden. Wenn Sie die direkte Übermittlung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit dies technisch machbar ist.",
+        "INFORMATION-BLOCKING-DELETION": "Auskunft, Sperrung, Löschung",
+        "INFORMATION-BLOCKING-DELETION-TEXT": "Soweit gesetzlich zulässig, haben Sie das Recht, jederzeit unentgeltlich Auskunft über Ihre bei uns gespeicherten personenbezogenen Daten sowie deren Herkunft, Empfänger und den Zweck der Verarbeitung zu erhalten. Sie haben auch das Recht, diese Daten berichtigen, sperren oder löschen zu lassen. Bei weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit an uns wenden.",
+        "OPPOSITION-EMAILS": "Widerspruch gegen Werbe-E-Mails",
+        "OPPOSITION-EMAILS-TEXT": "Wir widersprechen hiermit ausdrücklich der Nutzung der im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien. Der Betreiber der Website behält sich rechtliche Schritte vor, wenn unverlangte Werbematerialien, wie z. B. Spam-E-Mails, empfangen werden."
+      }
+    },
+    "3": {
+      "TITLE": "3. Datenerhebung auf unserer Website",
+      "COOKIES": {
+        "TEXT": "Einige unserer Webseiten verwenden Cookies. Cookies schaden Ihrem Computer nicht und enthalten keine Viren. Cookies helfen, unsere Website benutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Computer gespeichert und von Ihrem Browser abgelegt werden.",
+        "TEXT2": "Die meisten der von uns verwendeten Cookies sind so genannte 'Session-Cookies'. Diese werden nach Ihrem Besuch automatisch gelöscht. Andere Cookies bleiben im Speicher Ihres Geräts, bis Sie sie löschen. Diese Cookies ermöglichen es, Ihren Browser bei Ihrem nächsten Besuch auf der Seite wiederzuerkennen.",
+        "TEXT3": "Sie können Ihren Browser so konfigurieren, dass er Sie über die Verwendung von Cookies informiert und Sie entscheiden können, ob Sie ein Cookie im Einzelfall akzeptieren oder ablehnen. Alternativ kann Ihr Browser so eingestellt werden, dass Cookies unter bestimmten Bedingungen automatisch akzeptiert oder immer abgelehnt werden oder dass Cookies beim Schließen des Browsers automatisch gelöscht werden. Das Deaktivieren von Cookies kann die Funktionalität dieser Website einschränken."
+      },
+      "SERVER-LOGS": {
+        "TITLE": "Server-Logfiles",
+        "TEXT": "Der Website-Anbieter erhebt und speichert automatisch Informationen, die Ihr Browser an uns übermittelt, in sogenannten Server-Logfiles. Dies sind:",
+        "LIST1": "Browsertyp und Browserversion",
+        "LIST2": "Verwendetes Betriebssystem",
+        "LIST3": "Referrer-URL",
+        "LIST4": "Hostname des zugreifenden Rechners",
+        "LIST5": "Uhrzeit der Serveranfrage",
+        "LIST6": "IP-Adresse",
+        "DATA": "Diese Daten werden nicht mit anderen Datenquellen zusammengeführt.",
+        "BASIS": "Die Grundlage für die Datenverarbeitung bildet Art. 6 (1) (b) DSGVO, der die Verarbeitung von Daten zur Erfüllung eines Vertrages oder zur Durchführung vorvertraglicher Maßnahmen erlaubt."
+      },
+      "CONTACT-FORM": {
+        "TITLE": "Kontaktformular",
+        "TEXT1": "Wenn Sie uns über das Kontaktformular Fragen senden, erheben wir die eingegebenen Daten, einschließlich der Kontaktdaten, die Sie angeben, um Ihre Anfrage und etwaige Folgefragen zu beantworten. Wir geben diese Informationen ohne Ihre Erlaubnis nicht weiter.",
+        "TEXT2": "Wir werden die von Ihnen in das Kontaktformular eingegebenen Daten daher nur mit Ihrer Einwilligung gemäß Art. 6 (1) (a) DSGVO verarbeiten. Sie können Ihre Einwilligung jederzeit widerrufen. Eine informelle E-Mail genügt hierfür. Die Daten, die vor dem Eingang Ihres Widerrufs verarbeitet wurden, können jedoch weiterhin rechtmäßig verarbeitet werden.",
+        "TEXT3": "Wir werden die Daten, die Sie in das Kontaktformular eingeben, speichern, bis Sie die Löschung dieser Daten verlangen, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Speicherung nicht mehr zutrifft (z. B. nach Erfüllung Ihrer Anfrage). Gesetzliche Aufbewahrungsfristen bleiben unberührt."
+      }
+    },
+    "4": {
+      "TITLE": "4. Plugins und Tools",
+      "GOOGLE-WEB-FONTS": {
+        "CONTENT": "Für eine einheitliche Darstellung der Schriftarten verwendet diese Seite Web Fonts, die von Google bereitgestellt werden. Wenn Sie eine Seite aufrufen, lädt Ihr Browser die benötigten Web Fonts in den Browser-Cache, um Texte und Schriftarten korrekt darzustellen. Zu diesem Zweck muss Ihr Browser eine direkte Verbindung zu den Google-Servern herstellen. Google wird dadurch darüber informiert, dass unsere Seite über Ihre IP-Adresse aufgerufen wurde. Die Nutzung von Google Web Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Website. Dies stellt ein berechtigtes Interesse gemäß Art. 6 (1) (f) DSGVO dar.",
+        "CONTENT2": "Wenn Ihr Browser Web Fonts nicht unterstützt, wird eine Standardschriftart von Ihrem Computer verwendet. Weitere Informationen zur Handhabung von Nutzerdaten finden Sie unter",
+        "CONTENT3": "und in der Datenschutzerklärung von Google unter"
+      },
+      "INFORMATION": "Weitere Informationen zur Handhabung von Nutzerdaten finden Sie in der Datenschutzerklärung von Google unter"
+    }
+  },
   "WARNING": {},
-  "PRIVACY-POLICY": {},
   "FOOTER": {
     "IMPRINT": "Impressum"
   },
