@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,7 +9,13 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss'
 })
-export class PrivacyComponent {
+export class PrivacyComponent implements OnInit {
   mail: string = "info@ufuk-oezsahin.de"
 
+  constructor(private router: Router) { }
+  
+  
+    ngOnInit(): void {
+      window.scrollTo(0, 0);
+    }
 }

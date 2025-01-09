@@ -150,13 +150,37 @@
       "INFORMATION": "More information about handling user data can be found in the data protection declaration of Google at"
     }
   },
-  "FORM": {},
-  "WARNING": {},
-  "FOOTER": {
-    "IMPRINT": "imprint"
-  },
   "IMPRINT": {
-    "IMPRINT": "Imprint",
-    "CONTACT": "Contact"
+    "TITLE": "Imprint",
+    "SECTION_1": {
+      "TITLE": "Information according to § 5 TMG"
+    },
+    "CONTACT": "Contact:",
+    "RESPONSIBLE": {
+      "TITLE": "Responsible for content according to § 55 Abs. 2 RStV"
+    },
+    "LIABILITY_CONTENTS": {
+      "TITLE": "Liability for contents",
+      "TEXT": "As a service provider, we are responsible for our own contents on these pages according to § 7 Abs.1 TMG according to the general laws. According to §§ 8 to 10 TMG, we as service providers are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information according to the general laws remain unaffected. However, liability in this regard is only possible from the time of knowledge of a specific infringement. If we become aware of such infringements, we will remove these contents immediately."
+    },
+    "LIABILITY_LINKS": {
+      "TITLE": "Liability for links",
+      "TEXT": "Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal contents were not recognizable at the time of linking. However, a permanent content control of the linked pages is not reasonable without concrete evidence of a violation of the law. If we become aware of legal violations, we will remove such links immediately."
+    },
+    "COPYRIGHT": {
+      "TITLE": "Copyright",
+      "TEXT": "The contents and works created by the site operators on these pages are subject to German copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the contents on this site were not created by the operator, the copyrights of third parties are respected. In particular, third-party contents are marked as such. Should you nevertheless become aware of a copyright infringement, we ask for a corresponding note. If we become aware of legal violations, we will remove such contents immediately."
+    },
+    "DISPUTE_RESOLUTION": {
+      "TITLE": "Dispute Resolution",
+      "TEXT_1": "The European Commission provides a platform for online dispute resolution (ODR):",
+      "TEXT_2": "You can find our email address in the imprint above.",
+      "TEXT_3": "We are not willing or obliged to participate in dispute resolution procedures before a consumer arbitration board."
+    }
+  },
+  "FOOTER": {
+    "WEB": "Web Developer",
+    "LOCATION": "Ingolstadt, Germany",
+    "IMPRINT": "Imprint"
   }
 }

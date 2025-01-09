@@ -1,9 +1,9 @@
 <footer>
     <div class="leftSide">
-        <img class="myLogo" src="/img/UO-Logo.png" alt="logo">
+        <img routerLink="/" class="myLogo" src="/img/UO-Logo.png" alt="logo">
         <div>
-            <span>Web Developer</span>
-            <span>Ingolstadt, Germany</span>
+            <span>{{"FOOTER.WEB" | translate}}</span>
+            <span>{{"FOOTER.LOCATION" | translate}}</span>
         </div>
     </div>
 
@@ -15,6 +15,6 @@
         <a target="_blank" href="https://github.com/Ufuk95">Github</a>
         <a target="_blank" href="https://www.linkedin.com/in/ufuk-oezsahin/">LinkedIn</a>
         <a href="mailto:info@ufuk-oezsahin.de">Email</a>
-        <a href="#">Legal Notice</a>
+        <a routerLink="imprint">{{"FOOTER.IMPRINT" | translate}}</a>
     </div>
 </footer>

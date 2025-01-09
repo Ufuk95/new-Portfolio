@@ -1,1 +1,37 @@
-<p>imprint works!</p>
+<div>
+    <h1>{{ 'IMPRINT.TITLE' | translate }}</h1>
+    <h2>{{ 'IMPRINT.SECTION_1.TITLE' | translate }}</h2>
+    <p>
+        Ufuk Özsahin<br>
+        Jurastraße 15<br>
+        85129 Oberdolling<br>
+        Germany <!-- Diesen Inhalt nicht übersetzen -->
+    </p>
+    <h2>{{ 'IMPRINT.CONTACT' | translate }}</h2>
+    <p>
+        Phone: <a href="tel:+4915236253545">+4915236253545</a><br>
+        Email: <a href="mailto:{{mail}}">{{mail}}</a><br>
+        Web: <a href="http://ufuk-oezsahin.de">ufuk-oezsahin.de</a><!-- Diesen Inhalt nicht übersetzen -->
+    </p>
+    <h2>{{ 'IMPRINT.RESPONSIBLE.TITLE' | translate }}</h2>
+    <p>
+        Ufuk Özsahin<br>
+        Jurastraße 15<br>
+        85129 Oberdolling<br>
+        Germany<!-- Diesen Inhalt nicht übersetzen -->
+    </p>
+
+    <h3>{{ 'IMPRINT.LIABILITY_CONTENTS.TITLE' | translate }}</h3>
+    <p>{{ 'IMPRINT.LIABILITY_CONTENTS.TEXT' | translate }}</p>
+
+    <h3>{{ 'IMPRINT.LIABILITY_LINKS.TITLE' | translate }}</h3>
+    <p>{{ 'IMPRINT.LIABILITY_LINKS.TEXT' | translate }}</p>
+
+    <h3>{{ 'IMPRINT.COPYRIGHT.TITLE' | translate }}</h3>
+    <p>{{ 'IMPRINT.COPYRIGHT.TEXT' | translate }}</p>
+
+    <h3>{{ 'IMPRINT.DISPUTE_RESOLUTION.TITLE' | translate }}</h3>
+    <p>{{ 'IMPRINT.DISPUTE_RESOLUTION.TEXT_1' | translate }} 
+        <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>. 
+        {{'IMPRINT.DISPUTE_RESOLUTION.TEXT_2' | translate }} {{ 'IMPRINT.DISPUTE_RESOLUTION.TEXT_3' | translate }}</p>
+</div>

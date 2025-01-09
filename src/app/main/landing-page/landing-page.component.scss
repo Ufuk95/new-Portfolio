@@ -297,3 +297,17 @@ footer {
         
     }
 }
+
+@media (max-width: 375px) {
+    .myName {
+        font-size: 44px !important;
+    }
+}
+
+
+// Iphone SE Responsive
+@media (max-width: 375px) and (max-height: 667px) {
+    .rightSideLine {
+        height: 100px !important;
+    }
+}
