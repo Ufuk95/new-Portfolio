@@ -12,13 +12,13 @@
             <p class="contactMe">{{ "SKILL-SET.CONTACTME" | translate }}</p>
 
 
-            <button>{{ "SKILL-SET.TALK" | translate }}</button>
+            <a href="#contact"><button >{{ "SKILL-SET.TALK" | translate }}</button></a>
         </div>
     </div>
 
 
 
-    <div class="rightside">
+    <div class="rightside" [@skillSetAnimation]="startAnimation ? 'start' : 'void'">
         <div *ngFor="let image of skillImages" class="skill-container" (mouseover)="onHover(image)"
             (mouseleave)="onHover(null)">
             <!-- Tooltip nur für das letzte Bild -->

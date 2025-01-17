@@ -1,18 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2, HostListener, OnInit } from '@angular/core';
+import { Component, Renderer2, HostListener, OnInit, ElementRef, OnDestroy } from '@angular/core';
 import { portfolioProject } from '../../shared/ALL_PROJECTS';
 import { ProjectComponent } from './project/project.component';
 import { TranslateModule } from '@ngx-translate/core';
-
+import { portfolioAnimation } from '../../animation';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
   imports: [CommonModule, ProjectComponent, TranslateModule],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss']
+  styleUrls: ['./portfolio.component.scss'],
+  animations: [portfolioAnimation],
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, OnDestroy {
+  startAnimation = false;
 
   isJoinHovered = false;
   isPolloLocoHovered = false;
@@ -23,11 +25,19 @@ export class PortfolioComponent implements OnInit {
   allProjects = portfolioProject;
   selectedProject: any = null; // Aktuell ausgewähltes Projekt
   currentIndex = 0;
+  private observer!: IntersectionObserver; // Intersection Observer
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
 
   ngOnInit() {
     this.checkScreenSize();
+    this.observePortfolioSection();
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect(); // Cleanup
+    }
   }
 
   @HostListener('window:resize', [])
@@ -36,7 +46,23 @@ export class PortfolioComponent implements OnInit {
   }
 
   private checkScreenSize() {
-    this.isSmallScreen = window.innerWidth <= 1030;
+    this.isSmallScreen = window.innerWidth <= 1250;
+  }
+
+  // Beobachtet, ob der Portfolio-Bereich im Viewport sichtbar wird
+  private observePortfolioSection() {
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log('PortfolioComponent is in viewport. Starting animation!');
+          this.startAnimation = true; // Animation starten
+          this.observer.disconnect(); // Beobachtung beenden
+        }
+      },
+      { threshold: 0.4 } // 40% Sichtbarkeit erforderlich
+    );
+
+    this.observer.observe(this.elementRef.nativeElement); // Beobachte die Komponente
   }
 
   // Setzt das aktuell ausgewählte Projekt

@@ -55,13 +55,21 @@ p {
                 height: 192px;
                 border-radius: 16px;
                 right: 96px;
-                box-shadow:
+                box-shadow: 
                     10px 10px 20px rgba(61, 207, 182, 0.4),
-                    /* Weicher, großer Schatten */
                     0px 5px 15px rgba(61, 207, 182, 0.6);
-                /* Tieferer, fokussierter Schatten */
-                ;
+                opacity: 0;
+                transform: translateY(10px);
+                animation: slideIn 0.7s forwards ease-out;
             }
+            
+            @keyframes slideIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
         }
 
 
@@ -153,7 +161,7 @@ app-project {
 }
 
 // tablet responsive
-@media (min-width: 700px) and (max-width: 1030px) {
+@media (min-width: 700px) and (max-width: 1250px) {
     .fullBodyPortfolio {
         padding: 32px 96px;
 

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, Renderer2, HostListener, OnInit, ElementRef, OnDestroy } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { contactAnimation } from '../../animation';
 
 @Component({
   selector: 'app-contact',
@@ -11,13 +12,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   imports: [CommonModule, FormsModule, HttpClientModule, TranslateModule, RouterLink],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  animations: [contactAnimation]
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit, OnDestroy {
   isCheckboxHovered = false;
   isCheckboxChecked = false;
   formSubmitted = false;
   showNotification = false;
   errorMessage = '';
+  startAnimation = false;
 
   contactData: { name: string; email: string; message: string } = {
     name: '',
@@ -26,6 +29,7 @@ export class ContactComponent {
   };
 
   http = inject(HttpClient);
+  private observer!: IntersectionObserver;
 
   post = {
     endPoint: 'https://ufuk-oezsahin.de/sendMail.php',
@@ -38,8 +42,28 @@ export class ContactComponent {
     },
   };
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService, private elementRef: ElementRef) { }
 
+
+  ngOnInit() {
+    this.observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log('contactComponent is in viewport. Starting animation!');
+          this.startAnimation = true; // Animation starten
+          this.observer.disconnect(); // Beobachtung beenden
+        }
+      },
+      { threshold: 0.3 } // 30% Sichtbarkeit erforderlich
+    );
+    this.observer.observe(this.elementRef.nativeElement); // Beobachte die Komponente
+  }
+
+  ngOnDestroy() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
 
   get CheckboxImage(): string {
     if (this.isCheckboxChecked) {
@@ -63,13 +87,13 @@ export class ContactComponent {
 
   handleButtonClick(form: NgForm): void {
     this.formSubmitted = true; // Markiere das Formular als "abgesendet"
-    
+
     // Markiere alle Felder als "touched", um Fehlermeldungen anzuzeigen
     Object.keys(form.controls).forEach((field) => {
       const control = form.controls[field];
       control.markAsTouched();
     });
-  
+
     if (this.isFormValid(form)) {
       // Wenn das Formular gültig ist, senden wir es ab
       this.onSubmit(form);
@@ -77,20 +101,17 @@ export class ContactComponent {
       console.warn('Form is invalid. Please check the fields.');
     }
   }
-  
-  
-  
 
   onSubmit(form: NgForm): void {
     this.formSubmitted = true;
-  
+
     if (this.isFormValid(form)) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options).subscribe({
         next: () => {
           this.showNotification = true;
           this.errorMessage = '';
           this.resetFormState(form);
-  
+
           setTimeout(() => {
             this.showNotification = false;
           }, 2000);
@@ -110,8 +131,7 @@ export class ContactComponent {
       }
     }
   }
-  
-  
+
   private resetFormState(form: NgForm): void {
     form.resetForm();
     this.contactData = { name: '', email: '', message: '' };

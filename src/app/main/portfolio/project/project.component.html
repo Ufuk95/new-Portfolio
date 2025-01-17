@@ -2,7 +2,7 @@
 
     <!-- button to close the component -->
     <img class="closeLogo" [src]="changeCloseImageSource" alt="close" (click)="select.emit()"
-            (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
+        (mouseenter)="isCloseImageHovered = true" (mouseleave)="isCloseImageHovered = false">
 
 
     <div class="TextButtonImageArea">
@@ -15,28 +15,29 @@
                 <span>{{ "PORTFOLIO.PROJECT.ABOUT" | translate }}</span>
                 <p>{{ translatedDescription }}</p>
                 <div class="usedTechStack">
-                  <div *ngFor="let tech of techStack; let i = index">
-                    <img [src]="stackLogo[i]" [alt]="tech">
-                    <span>{{ tech }}</span>
-                  </div>
+                    <div *ngFor="let tech of techStack; let i = index">
+                        <img [src]="stackLogo[i]" [alt]="tech">
+                        <span>{{ tech }}</span>
+                    </div>
                 </div>
-              </div>
-              
-    
+            </div>
+
+
             <div class="testingGitButton">
                 <a [href]="git"><button>Github <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
-                <a [href]="link"><button>Livetest <img src="/img/portfolio/blueArrowTopRight.svg" alt="arrow"></button></a>
+                <a [href]="link"><button>Livetest <img src="/img/portfolio/blueArrowTopRight.svg"
+                            alt="arrow"></button></a>
             </div>
         </div>
-    
+
         <!-- Image Logo of project -->
         <div class="imageProject">
-            
+
             <img class="imageLogo" [src]="image" [alt]="name">
-            
+
         </div>
     </div>
-   
+
 
     <!-- nächstes projekt unten rechts bereich -->
     <div class="nextProject" (click)="changeProject()">

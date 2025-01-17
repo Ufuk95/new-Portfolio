@@ -1,95 +1,91 @@
 <div class="fullBodyPortfolio">
-    <div>
-        <p>Portfolio</p>
+  <div>
+    <p>Portfolio</p>
 
-        <h1>{{ "PORTFOLIO.FEATURE" | translate }}</h1>
+    <h1>{{ "PORTFOLIO.FEATURE" | translate }}</h1>
 
-        <span>{{ "PORTFOLIO.EXPLORE1" | translate }} <br>{{ "PORTFOLIO.EXPLORE2" | translate }}</span>
+    <span>{{ "PORTFOLIO.EXPLORE1" | translate }} <br>{{ "PORTFOLIO.EXPLORE2" | translate }}</span>
 
-        <div class="myProjects">
-            <div *ngIf="!selectedProject">
-                <div class="projectContainer" (click)="selectProjectByName('Join')">
-                  <div class="project" (mouseenter)="isJoinHovered = true" (mouseleave)="isJoinHovered = false">
-                    <span>Join</span>
-                    <div>
-                      <span>Javascript</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>HTML</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>CSS</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>Firebase</span>
-                    </div>
-                  </div>
-                  <img src="/img/portfolio/join.png" alt="Join logo" *ngIf="isJoinHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
-                </div>
-              
-                <div class="projectContainer" (click)="selectProjectByName('El Pollo Loco')">
-                  <div class="project" (mouseenter)="isPolloLocoHovered = true" (mouseleave)="isPolloLocoHovered = false">
-                    <span>El Pollo Loco</span>
-                    <div>
-                      <span>HTML</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>CSS</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>Javascript</span>
-                    </div>
-                  </div>
-                  <img src="/img/portfolio/elpolloloco.png" alt="El Pollo Loco logo" *ngIf="isPolloLocoHovered&& !isSmallScreen"> <!-- bei responsive position absolute ändern und auf 1920px anpassen -->
-                </div>
-              
-                <div class="projectContainer" (click)="selectProjectByName('Pokédex')">
-                  <div class="project" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
-                    <span>Pokédex</span>
-                    <div>
-                      <span>HTML</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>CSS</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>Javascript</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>API</span>
-                    </div>
-                  </div>
-                  <img src="/img/portfolio/pokedex.png" alt="Pokedex image" *ngIf="isPokedexHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
-                </div>
-
-                <div class="projectContainer" (click)="selectProjectByName('Portfolio')">
-                  <div class="project lastProject" (mouseenter)="isPortfolioHovered = true" (mouseleave)="isPortfolioHovered = false">
-                    <span>Portfolio(old)</span>
-                    <div>
-                      <span>HTML</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>SCSS</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>Typescript</span>
-                      <img src="/img/portfolio/|.svg" alt="|">
-                      <span>Angular</span>
-                    </div>
-                  </div>
-                  <img src="/img/portfolio/oldPortfolio.png" alt="last Portfolio" *ngIf="isPortfolioHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
-                </div>
-              </div>
-              
-              <!-- Detailansicht -->
-              <app-project
-                *ngIf="selectedProject"
-                [id]="selectedProject.id"
-                [name]="selectedProject.name"
-                [description]="selectedProject.description"
-                [techStack]="selectedProject.techStack"
-                [stackLogo]="selectedProject.stackLogo"
-                [image]="selectedProject.image"
-                [link]="selectedProject.link"
-                [git]="selectedProject.git"
-                [currentIndex]="currentIndex"
-                (projectChange)="onProjectChange($event)"
-                (select)="closeProject()">
-              </app-project>
-              
-            
+    <div class="myProjects">
+      <div *ngIf="!selectedProject" [@portfolioAnimation]="startAnimation ? 'start' : 'void'">
+        <div class="projectContainer" (click)="selectProjectByName('Join')">
+          <div class="project" (mouseenter)="isJoinHovered = true" (mouseleave)="isJoinHovered = false">
+            <span>Join</span>
+            <div>
+              <span>Javascript</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>HTML</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>CSS</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>Firebase</span>
+            </div>
+          </div>
+          <img src="/img/portfolio/join.png" alt="Join logo"
+            *ngIf="isJoinHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
         </div>
+
+        <div class="projectContainer" (click)="selectProjectByName('El Pollo Loco')">
+          <div class="project" (mouseenter)="isPolloLocoHovered = true" (mouseleave)="isPolloLocoHovered = false">
+            <span>El Pollo Loco</span>
+            <div>
+              <span>HTML</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>CSS</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>Javascript</span>
+            </div>
+          </div>
+          <img src="/img/portfolio/elpolloloco.png" alt="El Pollo Loco logo"
+            *ngIf="isPolloLocoHovered&& !isSmallScreen">
+          <!-- bei responsive position absolute ändern und auf 1920px anpassen -->
+        </div>
+
+        <div class="projectContainer" (click)="selectProjectByName('Pokédex')">
+          <div class="project" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
+            <span>Pokédex</span>
+            <div>
+              <span>HTML</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>CSS</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>Javascript</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>API</span>
+            </div>
+          </div>
+          <img src="/img/portfolio/pokedex.png" alt="Pokedex image"
+            *ngIf="isPokedexHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
+        </div>
+
+        <div class="projectContainer" (click)="selectProjectByName('Portfolio')">
+          <div class="project lastProject" (mouseenter)="isPortfolioHovered = true"
+            (mouseleave)="isPortfolioHovered = false">
+            <span>Portfolio(old)</span>
+            <div>
+              <span>HTML</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>SCSS</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>Typescript</span>
+              <img src="/img/portfolio/|.svg" alt="|">
+              <span>Angular</span>
+            </div>
+          </div>
+          <img src="/img/portfolio/oldPortfolio.png" alt="last Portfolio"
+            *ngIf="isPortfolioHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
+        </div>
+      </div>
+
+      <!-- Detailansicht -->
+      <app-project *ngIf="selectedProject" [id]="selectedProject.id" [name]="selectedProject.name"
+        [description]="selectedProject.description" [techStack]="selectedProject.techStack"
+        [stackLogo]="selectedProject.stackLogo" [image]="selectedProject.image" [link]="selectedProject.link"
+        [git]="selectedProject.git" [currentIndex]="currentIndex" (projectChange)="onProjectChange($event)"
+        (select)="closeProject()">
+      </app-project>
+
+
     </div>
-
-
+  </div>
 </div>

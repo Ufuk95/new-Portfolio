@@ -55,6 +55,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                padding: 0 6px;
 
                 >span {
                     font-size: 24px;
@@ -187,23 +188,20 @@
 }
 
 
-
-
 @media (min-width:320px) and (max-width:650px) {
     .projectDescription {
         padding: 12px;
         flex-direction: column-reverse; // test
         align-items: self-start;
+        justify-content: center;
         height: 100vh;
         width: 100vw;
         position: relative;
         overflow-y: auto;
 
         .TextButtonImageArea {
-
             flex-direction: column-reverse;
             padding-bottom: 42px;
-
 
             .testProject {
                 width: 100%;
@@ -212,49 +210,40 @@
                     flex-wrap: wrap;
                     gap: 20px;
                 }
-    
+
                 .projectText {
-    
+
                     >p {
                         font-size: 16px;
                     }
-    
+
                     >span {
                         font-size: 20px;
                     }
                 }
-    
-    
+
                 .testProjectHeadline {
-    
-    
                     h1 {
                         font-size: 72px;
                     }
-    
+
                     h2 {
                         font-size: 56px;
                     }
                 }
             }
-    
-    
+
+
             .imageProject {
                 height: unset;
                 width: unset;
-    
+
                 .imageLogo {
                     width: 80vw;
                     height: 180px;
                 }
-    
-                
             }
         }
-
-        
-
-
     }
 
     .closeLogo {
@@ -285,5 +274,44 @@
 
     .projectDescription .TextButtonImageArea .testProject {
         width: 100%;
+    }
+}
+
+
+// Iphone SE
+@media (width:375px) and (height:667px) {
+    .projectDescription {
+        .TextButtonImageArea {
+            .testProject {
+                gap: 20px;
+
+                .projectText {
+                    gap: 10px;
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                .testProjectHeadline {
+                    gap: 6px;
+
+                    h1 {
+                        font-size: 55px;
+                    }
+
+                    h2 {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            .imageProject {
+                .imageLogo {
+                    width: 70vw;
+                    height: 160px;
+                }
+            }
+        }
     }
 }
