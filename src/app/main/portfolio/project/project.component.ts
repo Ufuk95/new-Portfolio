@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core'; 
+import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -16,34 +16,34 @@ export class ProjectComponent implements OnInit {
 
   @Input() id!: string;
   @Input() name!: string;
-  
+
   // Beschreibung wird als Objekt mit en und de erwartet
   @Input() description!: { en: string; de: string };
-  
+
   @Input() techStack!: string[];
   @Input() stackLogo!: string[];
   @Input() image!: string;
   @Input() link!: string;
   @Input() git!: string;
   @Input() currentIndex!: number;
-  
+
   @Output() projectChange = new EventEmitter<number>();
   @Output() select = new EventEmitter<string>();
 
   // Standardwert für currentLanguage auf 'en'
-  currentLanguage: 'en' | 'de' = 'en'; 
+  currentLanguage: 'en' | 'de' = 'en';
 
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) { }
 
   ngOnInit() {
     if (!this.translate.currentLang) {
       this.translate.use('en');
     }
-    this.currentLanguage = this.translate.currentLang as 'en' | 'de'; 
+    this.currentLanguage = this.translate.currentLang as 'en' | 'de';
   }
 
   get translatedDescription() {
-    return this.description[this.currentLanguage]; 
+    return this.description[this.currentLanguage];
   }
 
   get changeCloseImageSource() {
@@ -53,6 +53,5 @@ export class ProjectComponent implements OnInit {
   changeProject() {
     const nextIndex = (this.currentIndex + 1) % 4;
     this.projectChange.emit(nextIndex);
-}
-
+  }
 }
