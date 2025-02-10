@@ -66,13 +66,14 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   }
 
   // Setzt das aktuell ausgewählte Projekt
-  selectProjectByName(projectName: string) {
+  selectProjectByName(projectName: string, id: number) {
     this.selectedProject = this.allProjects.find((proj) => proj.name === projectName);
     this.disableScrolling();
     this.isJoinHovered = false;
     this.isPolloLocoHovered = false;
     this.isPokedexHovered = false;
     this.isPortfolioHovered = false;
+    this.currentIndex = id;
   }
 
   // Schließt die Detailansicht

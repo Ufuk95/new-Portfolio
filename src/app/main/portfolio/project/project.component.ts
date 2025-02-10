@@ -53,5 +53,6 @@ export class ProjectComponent implements OnInit {
   changeProject() {
     const nextIndex = (this.currentIndex + 1) % 4;
     this.projectChange.emit(nextIndex);
-  }
+}
+
 }

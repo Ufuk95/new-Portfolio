@@ -4,6 +4,17 @@
     align-items: center;
     padding: 200px 112px 200px 112px;
     max-width: 1920px;
+    gap: 100px;
+
+
+    >img {
+        width: 40%;
+        border-radius: 20px;
+        object-fit: cover;
+        position: relative;
+        bottom: 120px;
+        filter: grayscale(1);
+    }
 
     .aboutMe {
         width: 100%;
@@ -64,6 +75,10 @@
         padding: 150px 16px 150px 16px;
 
 
+        >img {
+            width: 90%;
+            bottom: 0;
+        }
 
         .aboutMe {
 
@@ -86,5 +101,12 @@
     .fullBodyAboutMe {
         flex-direction: column;
         gap: 40px;
+
+
+
+        >img {
+            width: 70%;
+            bottom: 0;
+        }
     }
 }

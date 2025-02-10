@@ -8,7 +8,7 @@
 
     <div class="myProjects">
       <div *ngIf="!selectedProject" [@portfolioAnimation]="startAnimation ? 'start' : 'void'">
-        <div class="projectContainer" (click)="selectProjectByName('Join')">
+        <div class="projectContainer" (click)="selectProjectByName('Join', 0)">
           <div class="project" (mouseenter)="isJoinHovered = true" (mouseleave)="isJoinHovered = false">
             <span>Join</span>
             <div>
@@ -25,7 +25,7 @@
             *ngIf="isJoinHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
         </div>
 
-        <div class="projectContainer" (click)="selectProjectByName('El Pollo Loco')">
+        <div class="projectContainer" (click)="selectProjectByName('El Pollo Loco', 1)">
           <div class="project" (mouseenter)="isPolloLocoHovered = true" (mouseleave)="isPolloLocoHovered = false">
             <span>El Pollo Loco</span>
             <div>
@@ -41,7 +41,7 @@
           <!-- bei responsive position absolute ändern und auf 1920px anpassen -->
         </div>
 
-        <div class="projectContainer" (click)="selectProjectByName('Pokédex')">
+        <div class="projectContainer" (click)="selectProjectByName('Pokédex', 2)">
           <div class="project" (mouseenter)="isPokedexHovered = true" (mouseleave)="isPokedexHovered = false">
             <span>Pokédex</span>
             <div>
@@ -58,7 +58,7 @@
             *ngIf="isPokedexHovered && !isSmallScreen"><!-- bei responsive position absolute ändern und auf 1920px anpassen -->
         </div>
 
-        <div class="projectContainer" (click)="selectProjectByName('Portfolio')">
+        <div class="projectContainer" (click)="selectProjectByName('Portfolio', 3)">
           <div class="project lastProject" (mouseenter)="isPortfolioHovered = true"
             (mouseleave)="isPortfolioHovered = false">
             <span>Portfolio(old)</span>
